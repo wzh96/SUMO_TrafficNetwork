@@ -26,6 +26,7 @@ def ramp_close(meter):
     signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
     for phase in signal_program.phases:
         if 'r' not in phase.state:
+            print(phase.state)
             phase.duration = 0
     traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
 
@@ -33,6 +34,7 @@ def ramp_open(meter):
     signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
     for phase in signal_program.phases:
         if 'r' in phase.state:
+            print(phase.state)
             phase.duration = 0
     traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
 

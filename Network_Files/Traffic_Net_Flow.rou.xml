@@ -6,178 +6,228 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <!-- Vehicles, persons and containers (sorted by depart) -->
 
-    <!-- H15N in Total inflow 5000-->
-    <flow id="15N_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25S_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="15N_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10E_out" end="14400.00" vehsPerHour="800"/>
-    <flow id="15N_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H20E_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="15N_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H15N_out" end="14400.00" vehsPerHour="500"/>
-    <flow id="15N_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25N_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="15N_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H20W_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="15N_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10W_out" end="14400.00" vehsPerHour="200"/>
+    <!-- H15N in Total inflow 3400-->
+    <flow id="15N_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25S_out" end="28800.00" vehsPerHour="506"/>
+    <flow id="15N_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10E_out" end="28800.00" vehsPerHour="651"/>
+    <flow id="15N_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H20E_out" end="28800.00" vehsPerHour="289"/>
+    <flow id="15N_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H15N_out" end="28800.00" vehsPerHour="398"/>
+    <flow id="15N_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25N_out" end="28800.00" vehsPerHour="217"/>
+    <flow id="15N_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H20W_out" end="28800.00" vehsPerHour="253"/>
+    <flow id="15N_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10W_out" end="28800.00" vehsPerHour="145"/>
+    <flow id="15N_in-10E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="145"/>
+    <flow id="15N_in-10E_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="145"/>
+    <flow id="15N_in-20E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H20E_offR_1" end="28800.00" vehsPerHour="181"/>
+    <flow id="15N_in-15N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H15N_offR_1" end="28800.00" vehsPerHour="145"/>
+    <flow id="15N_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="145"/>
+    <flow id="15N_in-25N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25N_offR_1" end="28800.00" vehsPerHour="109"/>
+    <flow id="15N_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="72"/>
+
+    <!-- H25N in Total inflow 3800 -->
+    <flow id="25N_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10E_out" end="28800.00" vehsPerHour="563"/>
+    <flow id="25N_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H20E_out" end="28800.00" vehsPerHour="563"/>
+    <flow id="25N_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15N_out" end="28800.00" vehsPerHour="352"/>
+    <flow id="25N_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H25N_out" end="28800.00" vehsPerHour="211"/>
+    <flow id="25N_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H20W_out" end="28800.00" vehsPerHour="563"/>
+    <flow id="25N_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10W_out" end="28800.00" vehsPerHour="422"/>
+    <flow id="25N_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15S_out" end="28800.00" vehsPerHour="211"/>
+    <flow id="25N_in-10W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10W_offR_1" end="28800.00" vehsPerHour="141"/>
+    <flow id="25N_in-10W_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10W_offR_2" end="28800.00" vehsPerHour="141"/>
+    <flow id="25N_in-20W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H20W_offR_1" end="28800.00" vehsPerHour="211"/>
+    <flow id="25N_in-15N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15N_offR_1" end="28800.00" vehsPerHour="141"/>
+    <flow id="25N_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="141"/>
+    <flow id="25N_in-25N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H25N_offR_1" end="28800.00" vehsPerHour="70"/>
+    <flow id="25N_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="70"/>
 
 
-    <!-- H25N in Total inflow XXXX -->
-    <flow id="25N_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10E_out" end="14400.00" vehsPerHour="650"/>
-    <flow id="25N_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H20E_out" end="14400.00" vehsPerHour="800"/>
-    <flow id="25N_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15N_out" end="14400.00" vehsPerHour="180"/>
-    <flow id="25N_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H25N_out" end="14400.00" vehsPerHour="200"/>
-    <flow id="25N_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H20W_out" end="14400.00" vehsPerHour="800"/>
-    <flow id="25N_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H10W_out" end="14400.00" vehsPerHour="500"/>
-    <flow id="25N_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_in" toJunction="H15S_out" end="14400.00" vehsPerHour="150"/>
+    <!-- H10W in Total inflow 3900 -->
+    <flow id="10W_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H20E_out" end="28800.00" vehsPerHour="351"/>
+    <flow id="10W_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15N_out" end="28800.00" vehsPerHour="613"/>
+    <flow id="10W_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25N_out" end="28800.00" vehsPerHour="526"/>
+    <flow id="10W_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H20W_out" end="28800.00" vehsPerHour="438"/>
+    <flow id="10W_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H10W_out" end="28800.00" vehsPerHour="526"/>
+    <flow id="10W_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15S_out" end="28800.00" vehsPerHour="175"/>
+    <flow id="10W_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25S_out" end="28800.00" vehsPerHour="526"/>
+    <flow id="10W_in-10W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="88"/>
+    <flow id="10W_in-10W_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="88"/>
+    <flow id="10W_in-20W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H20E_offR_1" end="28800.00" vehsPerHour="131"/>
+    <flow id="10W_in-15N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15N_offR_1" end="28800.00" vehsPerHour="131"/>
+    <flow id="10W_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="131"/>
+    <flow id="10W_in-25N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25N_offR_1" end="28800.00" vehsPerHour="131"/>
+    <flow id="10W_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="88"/>
 
-    <!-- H10W in Total inflow XXXX-->
-    <flow id="10W_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H20E_out" end="14400.00" vehsPerHour="200"/>
-    <flow id="10W_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15N_out" end="14400.00" vehsPerHour="800"/>
-    <flow id="10W_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25N_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="10W_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H20W_out" end="14400.00" vehsPerHour="700"/>
-    <flow id="10W_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H10W_out" end="14400.00" vehsPerHour="800"/>
-    <flow id="10W_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H15S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="10W_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_in" toJunction="H25S_out" end="14400.00" vehsPerHour="800"/>
+    <!-- H20W in Total inflow 3000 -->
+    <flow id="20W_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15N_out" end="28800.00" vehsPerHour="425"/>
+    <flow id="20W_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25N_out" end="28800.00" vehsPerHour="418"/>
+    <flow id="20W_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H20W_out" end="28800.00" vehsPerHour="478"/>
+    <flow id="20W_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10W_out" end="28800.00" vehsPerHour="336"/>
+    <flow id="20W_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15S_out" end="28800.00" vehsPerHour="284"/>
+    <flow id="20W_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25S_out" end="28800.00" vehsPerHour="224"/>
+    <flow id="20W_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10E_out" end="28800.00" vehsPerHour="298"/>
+    <flow id="20W_in-10W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10W_offR_1" end="28800.00" vehsPerHour="67"/>
+    <flow id="20W_in-10W_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10W_offR_2" end="28800.00" vehsPerHour="75"/>
+    <flow id="20W_in-20W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H20W_offR_1" end="28800.00" vehsPerHour="97"/>
+    <flow id="20W_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="60"/>
+    <flow id="20W_in-15S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15S_offR_2" end="28800.00" vehsPerHour="112"/>
+    <flow id="20W_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="82"/>
+    <flow id="20W_in-25S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25S_offR_2" end="28800.00" vehsPerHour="45"/>
 
-    <!-- H20W in Total inflow XXXX-->
-    <flow id="20W_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15N_out" end="14400.00" vehsPerHour="650"/>
-    <flow id="20W_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25N_out" end="14400.00" vehsPerHour="850"/>
-    <flow id="20W_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H20W_out" end="14400.00" vehsPerHour="200"/>
-    <flow id="20W_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10W_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="20W_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H15S_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="20W_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H25S_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="20W_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_in" toJunction="H10E_out" end="14400.00" vehsPerHour="200"/>
+    <!-- H15S in Total inflow 3100 -->
+    <flow id="15S_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H20W_out" end="28800.00" vehsPerHour="472"/>
+    <flow id="15S_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10W_out" end="28800.00" vehsPerHour="404"/>
+    <flow id="15S_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H15S_out" end="28800.00" vehsPerHour="404"/>
+    <flow id="15S_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H25S_out" end="28800.00" vehsPerHour="337"/>
+    <flow id="15S_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10E_out" end="28800.00" vehsPerHour="270"/>
+    <flow id="15S_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H20E_out" end="28800.00" vehsPerHour="337"/>
+    <flow id="15S_in-15S_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H15S_offR_1" end="28800.00" vehsPerHour="101"/>
+    <flow id="15S_in-15S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H15S_offR_2" end="28800.00" vehsPerHour="101"/>
+    <flow id="15S_in-25S_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H25S_offR_1" end="28800.00" vehsPerHour="169"/>
+    <flow id="15S_in-25S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H25S_offR_2" end="28800.00" vehsPerHour="101"/>
+    <flow id="15S_in-20E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H20E_offR_1" end="28800.00" vehsPerHour="169"/>
+    <flow id="15S_in-10E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="135"/>
+    <flow id="15S_in-10E_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="101"/>
 
-    <!-- H15S in Total inflow XXXX-->
-    <flow id="15S_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H20W_out" end="14400.00" vehsPerHour="700"/>
-    <flow id="15S_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10W_out" end="14400.00" vehsPerHour="500"/>
-    <flow id="15S_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H15S_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="15S_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H25S_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="15S_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H10E_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="15S_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_in" toJunction="H20E_out" end="14400.00" vehsPerHour="500"/>
+    <!-- H25S in Total inflow 3300 -->
+    <flow id="25S_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H20W_out" end="28800.00" vehsPerHour="651"/>
+    <flow id="25S_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10W_out" end="28800.00" vehsPerHour="558"/>
+    <flow id="25S_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H15S_out" end="28800.00" vehsPerHour="465"/>
+    <flow id="25S_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H25S_out" end="28800.00" vehsPerHour="558"/>
+    <flow id="25S_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10E_out" end="28800.00" vehsPerHour="279"/>
+    <flow id="25S_in-15S_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H15S_offR_1" end="28800.00" vehsPerHour="139"/>
+    <flow id="25S_in-15S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H15S_offR_2" end="28800.00" vehsPerHour="93"/>
+    <flow id="25S_in-25S_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H25S_offR_1" end="28800.00" vehsPerHour="139"/>
+    <flow id="25S_in-25S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H25S_offR_2" end="28800.00" vehsPerHour="93"/>
+    <flow id="25S_in-20W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H20W_offR_1" end="28800.00" vehsPerHour="139"/>
+    <flow id="25S_in-10W_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10W_offR_1" end="28800.00" vehsPerHour="102"/>
+    <flow id="25S_in-10W_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10W_offR_2" end="28800.00" vehsPerHour="84"/>
 
-    <!-- H25S in Total inflow XXXX-->
-    <flow id="25S_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H20W_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="25S_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10W_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="25S_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H15S_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="25S_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H25S_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="25S_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H10E_out" end="14400.00" vehsPerHour="500"/>
-    <flow id="25S_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_in" toJunction="H20E_out" end="14400.00" vehsPerHour="300"/>
+    <!-- H20E in Total inflow 4000 -->
+    <flow id="20E_in-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10W_out" end="28800.00" vehsPerHour="364"/>
+    <flow id="20E_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15S_out" end="28800.00" vehsPerHour="582"/>
+    <flow id="20E_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25S_out" end="28800.00" vehsPerHour="582"/>
+    <flow id="20E_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10E_out" end="28800.00" vehsPerHour="436"/>
+    <flow id="20E_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H20E_out" end="28800.00" vehsPerHour="291"/>
+    <flow id="20E_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15N_out" end="28800.00" vehsPerHour="582"/>
+    <flow id="20E_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25N_out" end="28800.00" vehsPerHour="291"/>
+    <flow id="20E_in-15S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15S_offR_2" end="28800.00" vehsPerHour="145"/>
+    <flow id="20E_in-25S_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25S_offR_2" end="28800.00" vehsPerHour="145"/>
+    <flow id="20E_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="145"/>
+    <flow id="20E_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="73"/>
+    <flow id="20E_in-20E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H20E_offR_1" end="28800.00" vehsPerHour="145"/>
+    <flow id="20E_in-10E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="145"/>
+    <flow id="20E_in-10E_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="145"/>
 
-    <!-- H20E in Total inflow XXXX-->
-    <flow id="20E_in-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10W_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="20E_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15S_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="20E_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25S_out" end="14400.00" vehsPerHour="500"/>
-    <flow id="20E_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H10E_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="20E_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H20E_out" end="14400.00" vehsPerHour="200"/>
-    <flow id="20E_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H15N_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="20E_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_in" toJunction="H25N_out" end="14400.00" vehsPerHour="200"/>
+    <!-- H10E in Total inflow 3200 -->
+    <flow id="10E_in-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15S_out" end="28800.00" vehsPerHour="221"/>
+    <flow id="10E_in-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25S_out" end="28800.00" vehsPerHour="294"/>
+    <flow id="10E_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H10E_out" end="28800.00" vehsPerHour="515"/>
+    <flow id="10E_in-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H20E_out" end="28800.00" vehsPerHour="221"/>
+    <flow id="10E_in-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15N_out" end="28800.00" vehsPerHour="368"/>
+    <flow id="10E_in-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25N_out" end="28800.00" vehsPerHour="368"/>
+    <flow id="10E_in-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H20W_out" end="28800.00" vehsPerHour="368"/>
+    <flow id="10E_in-15N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15N_offR_1" end="28800.00" vehsPerHour="110"/>
+    <flow id="10E_in-25N_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25N_offR_1" end="28800.00" vehsPerHour="110"/>
+    <flow id="10E_in-15N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15N_offR_2" end="28800.00" vehsPerHour="147"/>
+    <flow id="10E_in-25N_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25N_offR_2" end="28800.00" vehsPerHour="74"/>
+    <flow id="10E_in-20E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H20E_offR_1" end="28800.00" vehsPerHour="147"/>
+    <flow id="10E_in-10E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="110"/>
+    <flow id="10E_in-10E_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="110"/>
 
-    <!-- H10E in Total inflow XXXX-->
-    <flow id="10E_in-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15S_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="10E_in-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25S_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="10E_in-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H10E_out" end="14400.00" vehsPerHour="200"/>
-    <flow id="10E_in-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H20E_out" end="14400.00" vehsPerHour="300"/>
-    <flow id="10E_in-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H15N_out" end="14400.00" vehsPerHour="400"/>
-    <flow id="10E_in-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H25N_out" end="14400.00" vehsPerHour="600"/>
-    <flow id="10E_in-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_in" toJunction="H20W_out" end="14400.00" vehsPerHour="300"/>
+    <!-- H10E_onR_1 Total inflow 700 -->
+    <flow id="10E_onR_1-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H25S_out" end="28800.00" vehsPerHour="117"/>
+    <flow id="10E_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="88"/>
+    <flow id="10E_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="175"/>
+    <flow id="10E_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="146"/>
+    <flow id="10E_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="117"/>
+    <flow id="10E_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="58"/>
 
-    <!-- H10E_onR_1 Total inflow 900-->
-    <flow id="10E_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="10E_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="80"/>
-    <flow id="10E_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="160"/>
-    <flow id="10E_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="230"/>
-    <flow id="10E_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="10E_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="90"/>
+    <!-- H10E_onR_2 Total inflow 800 -->
+    <flow id="10E_onR_2-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H25S_out" end="28800.00" vehsPerHour="100"/>
+    <flow id="10E_onR_2-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H10E_out" end="28800.00" vehsPerHour="200"/>
+    <flow id="10E_onR_2-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H20E_out" end="28800.00" vehsPerHour="160"/>
+    <flow id="10E_onR_2-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H15N_out" end="28800.00" vehsPerHour="120"/>
+    <flow id="10E_onR_2-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H25N_out" end="28800.00" vehsPerHour="100"/>
+    <flow id="10E_onR_2-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H20W_out" end="28800.00" vehsPerHour="120"/>
 
-    <!-- H10E_onR_2 Total in flow 800-->
-    <flow id="10E_onR_2-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H25S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="10E_onR_2-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H10E_out" end="14400.00" vehsPerHour="140"/>
-    <flow id="10E_onR_2-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H20E_out" end="14400.00" vehsPerHour="180"/>
-    <flow id="10E_onR_2-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H15N_out" end="14400.00" vehsPerHour="85"/>
-    <flow id="10E_onR_2-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H25N_out" end="14400.00" vehsPerHour="130"/>
-    <flow id="10E_onR_2-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10E_onR_2" toJunction="H20W_out" end="14400.00" vehsPerHour="70"/>
+    <!-- H20E_onR_1 Total inflow 800 -->
+    <flow id="20E_onR_1-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H25S_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20E_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="160"/>
+    <flow id="20E_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="160"/>
+    <flow id="20E_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20E_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20E_onR_1-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H10W_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20E_onR_1-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H15S_out" end="28800.00" vehsPerHour="53"/>
 
-    <!-- H20E_onR_1 Total in flow 800-->
-    <flow id="20E_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="20E_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="20E_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="140"/>
-    <flow id="20E_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="20E_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="160"/>
-    <flow id="20E_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="20E_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20E_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="60"/>
+    <!-- H10W_onR_1 Total inflow 900 -->
+    <flow id="10W_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="180"/>
+    <flow id="10W_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="135"/>
+    <flow id="10W_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="180"/>
+    <flow id="10W_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="90"/>
+    <flow id="10W_onR_1-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H10W_out" end="28800.00" vehsPerHour="135"/>
+    <flow id="10W_onR_1-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H15S_out" end="28800.00" vehsPerHour="180"/>
 
-    <!-- H10W_onR_1 -->
-    <flow id="10W_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="10W_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="110"/>
-    <flow id="10W_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="180"/>
-    <flow id="10W_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="90"/>
-    <flow id="10W_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="30"/>
-    <flow id="10W_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="40"/>
+    <!-- H10W_onR_2 Total inflow 1000 -->
+    <flow id="10W_onR_2-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H20E_out" end="28800.00" vehsPerHour="167"/>
+    <flow id="10W_onR_2-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H15N_out" end="28800.00" vehsPerHour="133"/>
+    <flow id="10W_onR_2-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H25N_out" end="28800.00" vehsPerHour="233"/>
+    <flow id="10W_onR_2-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H20W_out" end="28800.00" vehsPerHour="100"/>
+    <flow id="10W_onR_2-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H10W_out" end="28800.00" vehsPerHour="200"/>
+    <flow id="10W_onR_2-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H15S_out" end="28800.00" vehsPerHour="167"/>
 
-    <!-- H10W_onR_2 -->
-    <flow id="10W_onR_2-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H20E_out" end="14400.00" vehsPerHour="40"/>
-    <flow id="10W_onR_2-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H15N_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="10W_onR_2-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H25N_out" end="14400.00" vehsPerHour="140"/>
-    <flow id="10W_onR_2-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="10W_onR_2-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H10W_out" end="14400.00" vehsPerHour="30"/>
-    <flow id="10W_onR_2-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H10W_onR_2" toJunction="H15S_out" end="14400.00" vehsPerHour="23"/>
+    <!-- H20W_onR_1 Total inflow 800 -->
+    <flow id="20W_onR_1-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H25S_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20W_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="133"/>
+    <flow id="20W_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="96"/>
+    <flow id="20W_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="171"/>
+    <flow id="20W_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="80"/>
+    <flow id="20W_onR_1-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H10W_out" end="28800.00" vehsPerHour="107"/>
+    <flow id="20W_onR_1-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H15S_out" end="28800.00" vehsPerHour="107"/>
 
-    <!-- H20W_onR_1 -->
-    <flow id="20W_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="20W_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="20W_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="110"/>
-    <flow id="20W_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="20W_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="20W_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="20W_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H20W_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="40"/>
+    <!-- H15N_onR_1 Total inflow 900 -->
+    <flow id="15N_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="250"/>
+    <flow id="15N_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="300"/>
+    <flow id="15N_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="200"/>
+    <flow id="15N_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="150"/>
 
-    <!-- H15N_onR_1 -->
-    <flow id="15N_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="100"/>
-    <flow id="15N_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="140"/>
-    <flow id="15N_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="130"/>
-    <flow id="15N_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="170"/>
-    <flow id="15N_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="130"/>
-    <flow id="15N_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="40"/>
+    <!-- H15N_onR_2 Total inflow 700 -->
+    <flow id="15N_onR_2-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_2" toJunction="H15N_out" end="28800.00" vehsPerHour="300"/>
+    <flow id="15N_onR_2-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15N_onR_2" toJunction="H25N_out" end="28800.00" vehsPerHour="400"/>
 
-    <!-- H15N_onR_2 -->
-    <flow id="15N_onR_2-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15N_onR_2" toJunction="H15N_out" end="14400.00" vehsPerHour="100"/>
+    <!-- H25N_onR_1 Total inflow 1100 -->
+    <flow id="25N_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="400"/>
+    <flow id="25N_onR_1-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H15N_out" end="28800.00" vehsPerHour="400"/>
+    <flow id="25N_onR_1-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H25N_out" end="28800.00" vehsPerHour="200"/>
+    <flow id="25N_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="200"/>
 
-    <!-- H25N_onR_1 -->
-    <flow id="25N_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="25N_onR_1-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H15N_out" end="14400.00" vehsPerHour="140"/>
-    <flow id="25N_onR_1-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H25N_out" end="14400.00" vehsPerHour="160"/>
-    <flow id="25N_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="25N_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="25N_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="30"/>
+    <!-- H25N_onR_2 Total inflow 600-->
+    <flow id="25N_onR_2-15N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_2" toJunction="H15N_out" end="28800.00" vehsPerHour="350"/>
+    <flow id="25N_onR_2-25N_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25N_onR_2" toJunction="H25N_out" end="28800.00" vehsPerHour="250"/>
 
-    <!-- H25N_onR_2 -->
-    <flow id="25N_onR_2-15N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_2" toJunction="H15N_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="25N_onR_2-25N_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25N_onR_2" toJunction="H25N_out" end="14400.00" vehsPerHour="110"/>
+    <!-- H15S_onR_1 Total inflow 1000 -->
+    <flow id="15S_onR_1-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H25S_out" end="28800.00" vehsPerHour="188"/>
+    <flow id="15S_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="125"/>
+    <flow id="15S_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="250"/>
+    <flow id="15S_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="63"/>
+    <flow id="15S_onR_1-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H10W_out" end="28800.00" vehsPerHour="188"/>
+    <flow id="15S_onR_1-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H15S_out" end="28800.00" vehsPerHour="188"/>
 
-    <!-- H15S_onR_1 -->
-    <flow id="15S_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="60"/>
-    <flow id="15S_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="130"/>
-    <flow id="15S_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="15S_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="15S_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="15S_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="30"/>
+    <!-- H15S_onR_2 Total inflow 700 -->
+    <flow id="15S_onR_2-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H25S_out" end="28800.00" vehsPerHour="168"/>
+    <flow id="15S_onR_2-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H10E_out" end="28800.00" vehsPerHour="210"/>
+    <flow id="15S_onR_2-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H10W_out" end="28800.00" vehsPerHour="112"/>
+    <flow id="15S_onR_2-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H15S_out" end="28800.00" vehsPerHour="210"/>
 
-    <!-- H15S_onR_2 -->
-    <flow id="15S_onR_2-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H25S_out" end="14400.00" vehsPerHour="40"/>
-    <flow id="15S_onR_2-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H10E_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="15S_onR_2-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H20E_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="15S_onR_2-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="15S_onR_2-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H15S_onR_2" toJunction="H15S_out" end="14400.00" vehsPerHour="10"/>
+    <!-- H25S_onR_1 Total inflow 900 -->
+    <flow id="25S_onR_1-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H25S_out" end="28800.00" vehsPerHour="180"/>
+    <flow id="25S_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="150"/>
+    <flow id="25S_onR_1-20E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H20E_out" end="28800.00" vehsPerHour="200"/>
+    <flow id="25S_onR_1-20W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H20W_out" end="28800.00" vehsPerHour="100"/>
+    <flow id="25S_onR_1-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H10W_out" end="28800.00" vehsPerHour="120"/>
+    <flow id="25S_onR_1-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H15S_out" end="28800.00" vehsPerHour="150"/>
 
-    <!-- H25S_onR_1 -->
-    <flow id="25S_onR_1-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H25S_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="25S_onR_1-10E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H10E_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="25S_onR_1-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H20E_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="25S_onR_1-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="25S_onR_1-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H10W_out" end="14400.00" vehsPerHour="20"/>
-    <flow id="25S_onR_1-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_1" toJunction="H15S_out" end="14400.00" vehsPerHour="40"/>
-
-    <!-- H25S_onR_2 -->
-    <flow id="25S_onR_2-25S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H25S_out" end="14400.00" vehsPerHour="120"/>
-    <flow id="25S_onR_2-20E_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H20E_out" end="14400.00" vehsPerHour="150"/>
-    <flow id="25S_onR_2-20W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H20W_out" end="14400.00" vehsPerHour="50"/>
-    <flow id="25S_onR_2-10W_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H10W_out" end="14400.00" vehsPerHour="30"/>
-    <flow id="25S_onR_2-15S_out" begin="0.00" departLane="free" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H15S_out" end="14400.00" vehsPerHour="20"/>
+    <!-- H25S_onR_2 Total inflow 500 -->
+    <flow id="25S_onR_2-25S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H25S_out" end="28800.00" vehsPerHour="125"/>
+    <flow id="25S_onR_2-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H10E_out" end="28800.00" vehsPerHour="150"/>
+    <flow id="25S_onR_2-10W_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H10W_out" end="28800.00" vehsPerHour="100"/>
+    <flow id="25S_onR_2-15S_out" begin="0.00" departLane="best" departSpeed="max" reroute="true" fromJunction="H25S_onR_2" toJunction="H15S_out" end="28800.00" vehsPerHour="125"/>
 
 </routes>

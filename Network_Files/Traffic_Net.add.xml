@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-06-10 14:38:52 by Eclipse SUMO netedit Version 1.19.0
+<!-- generated on 2024-07-03 14:55:57 by Eclipse SUMO netedit Version 1.16.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
@@ -23,7 +23,7 @@
     <inductionLoop id="H10E_in_3" lane="E69_3" pos="116.29" period="180.00" file="H10E_in_3.xml"/>
     <inductionLoop id="H10E_offRamp1" lane="E59_0" pos="3.93" period="180.00" file="H10E_offRamp1.xml"/>
     <inductionLoop id="H10E_offRamp2" lane="E118_0" pos="4.79" period="180.00" file="H10E_offRamp2.xml"/>
-    <inductionLoop id="H10E_onRamp1" lane="E54_0" pos="244.22" period="180.00" file="H10E_onRamp1.xml"/>
+    <inductionLoop id="H10E_onRamp1" lane="E54_0" pos="244.22" period="180.00" file="H10E_onRamp1.xml" friendlyPos="1"/>
     <inductionLoop id="H10E_onRamp2" lane="E117_0" pos="201.20" period="180.00" file="H10E_onRamp2.xml"/>
     <inductionLoop id="H10E_out_0" lane="E102_0" pos="519.12" period="180.00" file="H10E_out_0.xml"/>
     <inductionLoop id="H10E_out_1" lane="E102_1" pos="519.12" period="180.00" file="H10E_out_1.xml"/>
@@ -47,8 +47,8 @@
     <inductionLoop id="H10W_in_3" lane="E101_3" pos="59.00" period="180.00" file="H10W_in_3.xml"/>
     <inductionLoop id="H10W_offRamp1" lane="E132_0" pos="4.60" period="180.00" file="H10W_offRamp1.xml"/>
     <inductionLoop id="H10W_offRamp2" lane="E130_0" pos="4.80" period="180.00" file="H10W_offRamp2.xml"/>
-    <inductionLoop id="H10W_onRamp1" lane="E131_0" pos="239.28" period="180.00" file="H10W_onRamp1.xml"/>
-    <inductionLoop id="H10W_onRamp2" lane="E129_0" pos="243.85" period="180.00" file="H10W_onRamp2.xml"/>
+    <inductionLoop id="H10W_onRamp1" lane="E131_0" pos="239.28" period="180.00" file="H10W_onRamp1.xml" friendlyPos="1"/>
+    <inductionLoop id="H10W_onRamp2" lane="E129_0" pos="243.85" period="180.00" file="H10W_onRamp2.xml" friendlyPos="1"/>
     <inductionLoop id="H10W_out_0" lane="E64_0" pos="1013.40" period="180.00" file="H10W_out_0.xml"/>
     <inductionLoop id="H10W_out_1" lane="E64_1" pos="1013.40" period="180.00" file="H10W_out_1.xml"/>
     <inductionLoop id="H10W_out_2" lane="E64_2" pos="1013.40" period="180.00" file="H10W_out_2.xml"/>
@@ -75,8 +75,8 @@
     <inductionLoop id="H15N_in_3" lane="E89_3" pos="43.40" period="180.00" file="H15N_in_3.xml"/>
     <inductionLoop id="H15N_offRamp1" lane="E58_0" pos="3.50" period="180.00" file="H15N_offRamp1.xml"/>
     <inductionLoop id="H15N_offRamp2" lane="E136_0" pos="3.70" period="180.00" file="H15N_offRamp2.xml"/>
-    <inductionLoop id="H15N_onRamp1" lane="E55_0" pos="161.62" period="180.00" file="H15N_onRamp1.xml"/>
-    <inductionLoop id="H15N_onRamp2" lane="E135_0" pos="162.54" period="180.00" file="H15N_onRamp2.xml"/>
+    <inductionLoop id="H15N_onRamp1" lane="E55_0" pos="161.62" period="180.00" file="H15N_onRamp1.xml" friendlyPos="1"/>
+    <inductionLoop id="H15N_onRamp2" lane="E135_0" pos="162.54" period="180.00" file="H15N_onRamp2.xml" friendlyPos="1"/>
     <inductionLoop id="H15N_out_0" lane="E115_0" pos="686.95" period="180.00" file="H15N_out_0.xml"/>
     <inductionLoop id="H15N_out_1" lane="E115_1" pos="686.94" period="180.00" file="H15N_out_1.xml"/>
     <inductionLoop id="H15N_out_2" lane="E115_2" pos="686.94" period="180.00" file="H15N_out_2.xml"/>
@@ -103,8 +103,8 @@
     <inductionLoop id="H15S_in_3" lane="E114_3" pos="57.21" period="180.00" file="H15S_in_3.xml"/>
     <inductionLoop id="H15S_offRamp1" lane="E138_0" pos="3.80" period="180.00" file="H15S_offRamp1.xml"/>
     <inductionLoop id="H15S_offRamp2" lane="E124_0" pos="3.51" period="180.00" file="H15S_offRamp2.xml"/>
-    <inductionLoop id="H15S_onRamp1" lane="E137_0" pos="203.85" period="180.00" file="H15S_onRamp1.xml"/>
-    <inductionLoop id="H15S_onRamp2" lane="E123_0" pos="160.35" period="180.00" file="H15S_onRamp2.xml"/>
+    <inductionLoop id="H15S_onRamp1" lane="E137_0" pos="203.85" period="180.00" file="H15S_onRamp1.xml" friendlyPos="1"/>
+    <inductionLoop id="H15S_onRamp2" lane="E123_0" pos="160.35" period="180.00" file="H15S_onRamp2.xml" friendlyPos="1"/>
     <inductionLoop id="H15S_out_0" lane="E88_0" pos="780.87" period="180.00" file="H15S_out_0.xml"/>
     <inductionLoop id="H15S_out_1" lane="E88_1" pos="780.87" period="180.00" file="H15S_out_1.xml"/>
     <inductionLoop id="H15S_out_2" lane="E88_2" pos="780.87" period="180.00" file="H15S_out_2.xml"/>
@@ -122,7 +122,7 @@
     <inductionLoop id="H20E_in_2" lane="E0_2" pos="190.49" period="180.00" file="H20E_in_2.xml"/>
     <inductionLoop id="H20E_in_3" lane="E0_3" pos="190.49" period="180.00" file="H20E_in_3.xml"/>
     <inductionLoop id="H20E_offRamp1" lane="E126_0" pos="6.72" period="180.00" file="H20E_offRamp1.xml"/>
-    <inductionLoop id="H20E_onRamp1" lane="E125_0" pos="162.34" period="180.00" file="H20E_onRamp1.xml"/>
+    <inductionLoop id="H20E_onRamp1" lane="E125_0" pos="162.34" period="180.00" file="H20E_onRamp1.xml" friendlyPos="1"/>
     <inductionLoop id="H20E_out_0" lane="E21_0" pos="816.05" period="180.00" file="H20E_out_0.xml"/>
     <inductionLoop id="H20E_out_1" lane="E21_1" pos="816.05" period="180.00" file="H20E_out_1.xml"/>
     <inductionLoop id="H20E_out_2" lane="E21_2" pos="816.05" period="180.00" file="H20E_out_2.xml"/>
@@ -140,7 +140,7 @@
     <inductionLoop id="H20W_in_2" lane="E15_2" pos="127.34" period="180.00" file="H20W_in_2.xml"/>
     <inductionLoop id="H20W_in_3" lane="E15_3" pos="127.34" period="180.00" file="H20W_in_3.xml"/>
     <inductionLoop id="H20W_offRamp1" lane="E128_0" pos="6.91" period="180.00" file="H20W_offRamp1.xml"/>
-    <inductionLoop id="H20W_onRamp1" lane="E127_0" pos="169.36" period="180.00" file="H20W_onRamp1.xml"/>
+    <inductionLoop id="H20W_onRamp1" lane="E127_0" pos="169.36" period="180.00" file="H20W_onRamp1.xml" friendlyPos="1"/>
     <inductionLoop id="H20W_out_0" lane="E7_0" pos="946.73" period="180.00" file="H20W_out_0.xml"/>
     <inductionLoop id="H20W_out_1" lane="E7_1" pos="946.73" period="180.00" file="H20W_out_1.xml"/>
     <inductionLoop id="H20W_out_2" lane="E7_2" pos="946.73" period="180.00" file="H20W_out_2.xml"/>
@@ -167,8 +167,8 @@
     <inductionLoop id="H25N_in_3" lane="E96_3" pos="41.73" period="180.00" file="H25N_in_3.xml"/>
     <inductionLoop id="H25N_offRamp1" lane="E61_0" pos="4.57" period="180.00" file="H25N_offRamp1.xml"/>
     <inductionLoop id="H25N_offRamp2" lane="E120_0" pos="5.45" period="180.00" file="H25N_offRamp2.xml"/>
-    <inductionLoop id="H25N_onRamp1" lane="E60_0" pos="283.46" period="180.00" file="H25N_onRamp1.xml"/>
-    <inductionLoop id="H25N_onRamp2" lane="E119_0" pos="290.61" period="180.00" file="H25N_onRamp2.xml"/>
+    <inductionLoop id="H25N_onRamp1" lane="E60_0" pos="283.46" period="180.00" file="H25N_onRamp1.xml" friendlyPos="1"/>
+    <inductionLoop id="H25N_onRamp2" lane="E119_0" pos="290.61" period="180.00" file="H25N_onRamp2.xml" friendlyPos="1"/>
     <inductionLoop id="H25N_out_0" lane="E62_0" pos="371.84" period="180.00" file="H25N_out_0.xml"/>
     <inductionLoop id="H25N_out_1" lane="E62_1" pos="371.84" period="180.00" file="H25N_out_1.xml"/>
     <inductionLoop id="H25N_out_2" lane="E62_2" pos="371.84" period="180.00" file="H25N_out_2.xml"/>
@@ -195,8 +195,8 @@
     <inductionLoop id="H25S_in_3" lane="E63_3" pos="41.91" period="180.00" file="H25S_in_3.xml"/>
     <inductionLoop id="H25S_offRamp1" lane="E133_0" pos="4.59" period="180.00" file="H25S_offRamp1.xml"/>
     <inductionLoop id="H25S_offRamp2" lane="E122_0" pos="4.46" period="180.00" file="H25S_offRamp2.xml"/>
-    <inductionLoop id="H25S_onRamp1" lane="E134_0" pos="248.78" period="180.00" file="H25S_onRamp1.xml"/>
-    <inductionLoop id="H25S_onRamp2" lane="E121_0" pos="254.61" period="180.00" file="H25S_onRamp2.xml"/>
+    <inductionLoop id="H25S_onRamp1" lane="E134_0" pos="248.78" period="180.00" file="H25S_onRamp1.xml" friendlyPos="1"/>
+    <inductionLoop id="H25S_onRamp2" lane="E121_0" pos="254.61" period="180.00" file="H25S_onRamp2.xml" friendlyPos="1"/>
     <inductionLoop id="H25S_out_0" lane="E95_0" pos="890.90" period="180.00" file="H25S_out_0.xml"/>
     <inductionLoop id="H25S_out_1" lane="E95_1" pos="890.90" period="180.00" file="H25S_out_1.xml"/>
     <inductionLoop id="H25S_out_2" lane="E95_2" pos="890.90" period="180.00" file="H25S_out_2.xml"/>
