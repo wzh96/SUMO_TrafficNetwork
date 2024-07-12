@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-05-24 14:45:44 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <!-- H10E in Total inflow 3200 -->
+    <flow id="10E_in-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_out" end="28800.00" period="exp(2)"/>
+<!--period="exp(X)"-->
+    <flow id="10E_in-10E_offR_1" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_offR_1" end="28800.00" vehsPerHour="2000"/>
+    <flow id="10E_in-10E_offR_2" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_offR_2" end="28800.00" vehsPerHour="1200"/>
+    <flow id="10E_in-10E_offR_3" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_offR_3" end="28800.00" vehsPerHour="1200"/>
+    <flow id="10E_in-10E_offR_4" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_offR_4" end="28800.00" vehsPerHour="1200"/>
+    <flow id="10E_in-10E_offR_5" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_in" toJunction="H10E_offR_5" end="28800.00" vehsPerHour="1200"/>
+
+    <!-- H10E_onR_1 Total inflow 500 -->
+    <flow id="10E_onR_1-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_1" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_2 Total inflow 600 -->
+    <flow id="10E_onR_2-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_2" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+     <!-- H10E_onR_3 Total inflow 400 -->
+    <flow id="10E_onR_3-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_3" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_4 Total inflow 300 -->
+    <flow id="10E_onR_4-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_4" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_5 Total inflow 400 -->
+    <flow id="10E_onR_5-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_5" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_6 Total inflow 400 -->
+    <flow id="10E_onR_6-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_6" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_7 Total inflow 500 -->
+    <flow id="10E_onR_7-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_7" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+    <!-- H10E_onR_8 Total inflow 300 -->
+    <flow id="10E_onR_8-10E_out" begin="0.00" departLane="best" departSpeed="max" reroute="false" fromJunction="H10E_onR_8" toJunction="H10E_out" end="28800.00" vehsPerHour="1800"/>
+
+
+</routes>

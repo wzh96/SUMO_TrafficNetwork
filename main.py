@@ -1,20 +1,43 @@
 import os
-from RUN_SIM import run_simulation, run_simulation_ramp_close, run_simulation_ramp_open
+from RUN_SIM import run_simulation, run_simulation_ramp_close, run_simulation_ramp_open, run_simulation_ALIANA
 from XML2CSV import xml_to_csv
+from utilis import params
 
 if __name__ == '__main__':
-    run_simulation_ramp_open(total_sim_step=14400, control_interval=180, green_duation=5)
+    total_sim_step = params['total_sim_step']
+    control_interval = params['control_interval']
 
-    # Directory where all xml files are stored
-    xml_dict = "Network_Files/Loop_Data_Ramp_Open/"
-    file_list = os.listdir(xml_dict)
+    run_scenarios = "No Control"
+    # run_scenarios = "ALIANA"
 
-    # convert xml files to csv files
-    for file in file_list:
-        xml_file = os.path.join(xml_dict, file)
-        xml_to_csv(xml_file, path='Sim_Results/Ramp_Open/')
+    if run_scenarios == "No Control":
+        run_simulation_ramp_open(total_sim_step=total_sim_step, control_interval=control_interval)
 
-    # # run simulation with ramp close
+        # Directory where all xml files are stored
+        xml_dict = "Network_Files_2/Loop_Data_Ramp_Open/"
+        file_list = os.listdir(xml_dict)
+
+        # convert xml files to csv files
+        for file in file_list:
+            xml_file = os.path.join(xml_dict, file)
+            xml_to_csv(xml_file, path='Sim_Results/Ramp_Open/')
+    elif run_scenarios == "ALIANA":
+        run_simulation_ALIANA(total_sim_step=total_sim_step, control_interval=control_interval)
+
+        # Directory where all xml files are stored
+        xml_dict = "Network_Files_2/Loop_Data_Ramp_ALIANA/"
+        file_list = os.listdir(xml_dict)
+
+        # convert xml files to csv files
+        for file in file_list:
+            xml_file = os.path.join(xml_dict, file)
+            xml_to_csv(xml_file, path='Sim_Results/Ramp_ALIANA/')
+
+
+
+
+
+    # run simulation with ramp close
     # run_simulation_ramp_close(total_sim_step=14400, control_interval=180, green_duation=5)
     #
     # # Directory where all xml files are stored
@@ -27,13 +50,13 @@ if __name__ == '__main__':
     #     xml_to_csv(xml_file, path='Sim_Results/Ramp_Close/')
 
     # run simulation with random rate
-    run_simulation(total_sim_step=14400, control_interval=180, green_duation=5, min_rate=0.05, max_rate=0.6, warning=False)
-
-    # Directory where all xml files are stored
-    xml_dict = "Network_Files/Loop_Data_Ramp_Random/"
-    file_list = os.listdir(xml_dict)
-
-    # convert xml files to csv files
-    for file in file_list:
-        xml_file = os.path.join(xml_dict, file)
-        xml_to_csv(xml_file, path='Sim_Results/Ramp_Random/')
+    # run_simulation(total_sim_step=14400, control_interval=180, green_duation=5, min_rate=0.05, max_rate=0.6, warning=False)
+    #
+    # # Directory where all xml files are stored
+    # xml_dict = "Network_Files/Loop_Data_Ramp_Random/"
+    # file_list = os.listdir(xml_dict)
+    #
+    # # convert xml files to csv files
+    # for file in file_list:
+    #     xml_file = os.path.join(xml_dict, file)
+    #     xml_to_csv(xml_file, path='Sim_Results/Ramp_Random/')
