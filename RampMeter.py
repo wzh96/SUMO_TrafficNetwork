@@ -4,7 +4,7 @@ import traci
 import numpy as np
 
 
-def change_meter_rate(meter, meter_rate, green_duration = 2, control_step=0):
+def change_meter_rate_random(meter, meter_rate, green_duration = 2, control_step=0):
     """
     :param meter:
     :param meter_rate:
@@ -22,6 +22,17 @@ def change_meter_rate(meter, meter_rate, green_duration = 2, control_step=0):
             phase.duration = red_duration
     traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
     print(signal_program)
+
+
+def change_meter_rate(meter, rate, green_duration = 2):
+    red_duration = (3600 - rate * green_duration) / rate
+    signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
+    for phase in signal_program.phases:
+        if 'r' in phase.state:
+            phase.duration = red_duration
+    traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
+    print(signal_program)
+
 
 
 def ALIANA_Controller(meter, r_pre, occu_down, occu_desire=20, K_R = 70, green_duration = 2, r_min = 400, r_max = 1800):
