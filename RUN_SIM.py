@@ -55,8 +55,8 @@ def run_simulation_random(total_sim_step = 7200, control_interval = 180, green_d
 
     meter_rate.to_csv('Results/Meter_Rate_Random.csv', index=False)
 
-def run_simulation_ALIANA(total_sim_step = 7200, control_interval = 180, r_min = 100, r_max = 1800,
-                          occu_desire=20, K_R = 50, warning = True, files_out_dict = "Loop_Data_Ramp_ALIANA/"):
+def run_simulation_ALIANA(total_sim_step = 7200, control_interval = 180, r_min = 300, r_max = 1800,
+                          occu_desire=15, K_R = 40, warning = True, files_out_dict = "Loop_Data_Ramp_ALIANA/"):
 
     sumoBinary = "sumo-gui"
     if warning:

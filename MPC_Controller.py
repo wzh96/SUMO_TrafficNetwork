@@ -2,7 +2,6 @@ import do_mpc
 from casadi import *
 
 def Flow_Dynamics_Model(equations):
-
     # define model type as continuous
     model_type = 'continuous'
     model = do_mpc.model.Model(model_type)
@@ -39,80 +38,109 @@ def Flow_Dynamics_Model(equations):
     return model
 
 
-def MPC_Controller(model, silence_solver = False):
-    mpc = do_mpc.controller.MPC(model)
+def MPC_Controller(model, params, setup_mpc, silence_solver = False):
 
-    setup_mpc = {
-        'n_horizon': 3,
-        't_step': 1,
-        'n_robust': 0,
-        'store_full_solution': True,
-        'nlpsol_opts': {'ipopt.linear_solver': 'mumps', 'ipopt.max_iter': 2000}
-    }
+    coeff_mterm = params['coeff_mterm']
+    coeff_lterm = params['coeff_lterm']
+    coeff_R = params['coeff_R']
+
+    mpc = do_mpc.controller.MPC(model)
     mpc.set_param(**setup_mpc)
+
+    mpc.settings.set_linear_solver('mumps')
     if silence_solver:
         mpc.settings.supress_ipopt_output()
 
     # set model objective function
-    mterm = 1e-5 * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
-             - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
-    lterm = 1e-5 * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
-             - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
+    # mterm = coeff_mterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
+    #          - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
+    # lterm = coeff_lterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
+    #          - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
+
+    mterm = coeff_mterm * ((fabs(model._x['x0']-params['desire_occu']) + fabs(model._x['x1']-params['desire_occu']) +
+                            fabs(model._x['x2']-params['desire_occu'])) + fabs(model._x['x3']-params['desire_occu']) +
+                            fabs(model._x['x4']-params['desire_occu']) + fabs(model._x['x5']-params['desire_occu']) +
+                            fabs(model._x['x6'] - params['desire_occu']) + fabs(model._x['x7'] - params['desire_occu']))
+
+    lterm = coeff_lterm * ((fabs(model._x['x0'] - params['desire_occu']) + fabs(model._x['x1'] - params['desire_occu']) +
+                            fabs(model._x['x2'] - params['desire_occu'])) + fabs(model._x['x3'] - params['desire_occu']) +
+                            fabs(model._x['x4'] - params['desire_occu']) + fabs(model._x['x5'] - params['desire_occu']) +
+                            fabs(model._x['x6'] - params['desire_occu']) + fabs(model._x['x7'] - params['desire_occu']))
+
 
     mpc.set_objective(mterm=mterm, lterm=lterm)
 
-    R = 1e-10
     mpc.set_rterm(
-        u0=R,
-        u1=R,
-        u2=R,
-        u3=R,
-        u4=R,
-        u5=R,
-        u6=R,
-        u7=R
+        u0=coeff_R,
+        u1=coeff_R,
+        u2=coeff_R,
+        u3=coeff_R,
+        u4=coeff_R,
+        u5=coeff_R,
+        u6=coeff_R,
+        u7=coeff_R
     )
 
     # state lower bound
-    mpc.bounds['lower', '_x', 'x0'] = 1000
-    mpc.bounds['lower', '_x', 'x1'] = 1000
-    mpc.bounds['lower', '_x', 'x2'] = 1000
-    mpc.bounds['lower', '_x', 'x3'] = 1000
-    mpc.bounds['lower', '_x', 'x4'] = 1000
-    mpc.bounds['lower', '_x', 'x5'] = 1000
-    mpc.bounds['lower', '_x', 'x6'] = 1000
-    mpc.bounds['lower', '_x', 'x7'] = 1000
+    mpc.bounds['lower', '_x', 'x0'] = 1
+    mpc.bounds['lower', '_x', 'x1'] = 1
+    mpc.bounds['lower', '_x', 'x2'] = 1
+    mpc.bounds['lower', '_x', 'x3'] = 1
+    mpc.bounds['lower', '_x', 'x4'] = 1
+    mpc.bounds['lower', '_x', 'x5'] = 1
+    mpc.bounds['lower', '_x', 'x6'] = 1
+    mpc.bounds['lower', '_x', 'x7'] = 1
 
     # state upper bound
-    mpc.bounds['upper', '_x', 'x0'] = 13000
-    mpc.bounds['upper', '_x', 'x1'] = 13000
-    mpc.bounds['upper', '_x', 'x2'] = 13000
-    mpc.bounds['upper', '_x', 'x3'] = 13000
-    mpc.bounds['upper', '_x', 'x4'] = 13000
-    mpc.bounds['upper', '_x', 'x5'] = 13000
-    mpc.bounds['upper', '_x', 'x6'] = 13000
-    mpc.bounds['upper', '_x', 'x7'] = 13000
+    mpc.bounds['upper', '_x', 'x0'] = 80
+    mpc.bounds['upper', '_x', 'x1'] = 80
+    mpc.bounds['upper', '_x', 'x2'] = 80
+    mpc.bounds['upper', '_x', 'x3'] = 80
+    mpc.bounds['upper', '_x', 'x4'] = 80
+    mpc.bounds['upper', '_x', 'x5'] = 80
+    mpc.bounds['upper', '_x', 'x6'] = 80
+    mpc.bounds['upper', '_x', 'x7'] = 80
 
     # control lower bound
-    mpc.bounds['lower', '_u', 'u0'] = 200
-    mpc.bounds['lower', '_u', 'u1'] = 200
-    mpc.bounds['lower', '_u', 'u2'] = 200
-    mpc.bounds['lower', '_u', 'u3'] = 200
-    mpc.bounds['lower', '_u', 'u4'] = 200
-    mpc.bounds['lower', '_u', 'u5'] = 200
-    mpc.bounds['lower', '_u', 'u6'] = 200
-    mpc.bounds['lower', '_u', 'u7'] = 200
+    mpc.bounds['lower', '_u', 'u0'] = 20
+    mpc.bounds['lower', '_u', 'u1'] = 20
+    mpc.bounds['lower', '_u', 'u2'] = 20
+    mpc.bounds['lower', '_u', 'u3'] = 20
+    mpc.bounds['lower', '_u', 'u4'] = 20
+    mpc.bounds['lower', '_u', 'u5'] = 20
+    mpc.bounds['lower', '_u', 'u6'] = 20
+    mpc.bounds['lower', '_u', 'u7'] = 20
 
     # control upper bound
-    mpc.bounds['upper', '_u', 'u0'] = 1800
-    mpc.bounds['upper', '_u', 'u1'] = 1800
-    mpc.bounds['upper', '_u', 'u2'] = 1800
-    mpc.bounds['upper', '_u', 'u3'] = 1800
-    mpc.bounds['upper', '_u', 'u4'] = 1800
-    mpc.bounds['upper', '_u', 'u5'] = 1800
-    mpc.bounds['upper', '_u', 'u6'] = 1800
-    mpc.bounds['upper', '_u', 'u7'] = 1800
+    mpc.bounds['upper', '_u', 'u0'] = 180
+    mpc.bounds['upper', '_u', 'u1'] = 180
+    mpc.bounds['upper', '_u', 'u2'] = 180
+    mpc.bounds['upper', '_u', 'u3'] = 180
+    mpc.bounds['upper', '_u', 'u4'] = 180
+    mpc.bounds['upper', '_u', 'u5'] = 180
+    mpc.bounds['upper', '_u', 'u6'] = 180
+    mpc.bounds['upper', '_u', 'u7'] = 180
 
+    # set terminal lower bound for the state
+    mpc.terminal_bounds['lower', 'x0'] = 1
+    mpc.terminal_bounds['lower', 'x1'] = 1
+    mpc.terminal_bounds['lower', 'x2'] = 1
+    mpc.terminal_bounds['lower', 'x3'] = 1
+    mpc.terminal_bounds['lower', 'x4'] = 1
+    mpc.terminal_bounds['lower', 'x5'] = 1
+    mpc.terminal_bounds['lower', 'x6'] = 1
+    mpc.terminal_bounds['lower', 'x7'] = 1
+
+
+    # set terminal upper bound for the state
+    mpc.terminal_bounds['upper', 'x0'] = 80
+    mpc.terminal_bounds['upper', 'x1'] = 80
+    mpc.terminal_bounds['upper', 'x2'] = 80
+    mpc.terminal_bounds['upper', 'x3'] = 80
+    mpc.terminal_bounds['upper', 'x4'] = 80
+    mpc.terminal_bounds['upper', 'x5'] = 80
+    mpc.terminal_bounds['upper', 'x6'] = 80
+    mpc.terminal_bounds['upper', 'x7'] = 80
 
     mpc.setup()
 

@@ -35,7 +35,7 @@ def change_meter_rate(meter, rate, green_duration = 2):
 
 
 
-def ALIANA_Controller(meter, r_pre, occu_down, occu_desire=20, K_R = 70, green_duration = 2, r_min = 400, r_max = 1800):
+def ALIANA_Controller(meter, r_pre, occu_down, occu_desire, K_R, r_min, r_max, green_duration = 2):
     r_k = r_pre + K_R * (occu_desire - occu_down)
 
     if r_k > r_max:

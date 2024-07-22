@@ -7,8 +7,8 @@ if __name__ == '__main__':
     total_sim_step = params['total_sim_step']
     control_interval = params['control_interval']
 
-    run_scenarios = "No Control"
-    # run_scenarios = "ALIANA"
+    # run_scenarios = "No Control"
+    run_scenarios = "ALIANA"
 
     if run_scenarios == "No Control":
         run_simulation_ramp_open(total_sim_step=total_sim_step, control_interval=control_interval)

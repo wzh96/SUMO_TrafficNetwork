@@ -60,16 +60,18 @@ def run_simulation_MPC(mpc_controller, total_sim_step = 7200, control_interval =
             x0 = np.array(list(x0.values())) * 3600/control_interval
             print(x0)
 
-            # if step / control_interval == 1:
-            #     mpc_controller.x0 = x0
+            if step / control_interval == 1:
+                mpc_controller.x0 = x0
+                mpc_controller.set_initial_guess()
 
             # call MPC controller
             print("calculating ramp metering rate using MPC controller")
             u0 = mpc_controller.make_step(x0)
+            u0 = np.round(u0, 0)
 
             print("resetting ramp metering rate u0")
-            for meter_num in range(len(meter_list)):
-                meter = meter_list[meter_num]
+            for meter_num in range(len(meter_list)-3):
+                meter = meter_list[meter_num+3]
                 MPC_rate = u0[meter_num]
                 change_meter_rate(meter=meter, rate = MPC_rate)
                 meter_rate_table.at[step / control_interval, meter] = MPC_rate
