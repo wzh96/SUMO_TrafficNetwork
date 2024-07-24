@@ -6,16 +6,20 @@ params['control_interval'] = 60
 
 
 MPC_params = {
-    'coeff_mterm' : 1,
-    'coeff_lterm' : 1,
-    'coeff_R' : 0,
-    'desire_occu' : 15
+    'param_mterm' : 1,
+    'param_lterm' : 1,
+    'param_R' : 0.001,
+    'desire_occu' : 25,
+    'param_U_upper': 180,
+    'param_U_lower': 10,
+    'param_X_upper': 50,
+    'param_X_lower': 0
 }
 
 setup_mpc = {
-    'n_horizon': 5,
+    'n_horizon': 4,
     't_step': 1,
-    'n_robust': 1,
+    'n_robust': 0,
     'store_full_solution': True,
     'nlpsol_opts': {'ipopt.max_iter': 2000}
 }
