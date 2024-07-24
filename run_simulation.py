@@ -283,7 +283,3 @@ def run_simulation_random(sumoBinary = "sumo-gui", total_sim_step = 7200, contro
     traci.close()
 
     meter_rate.to_csv('Results/Meter_Rate_Random.csv', index=False)
-
-
-
-
