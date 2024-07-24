@@ -40,9 +40,13 @@ def Flow_Dynamics_Model(equations):
 
 def MPC_Controller(model, params, setup_mpc, silence_solver = False):
 
-    coeff_mterm = params['coeff_mterm']
-    coeff_lterm = params['coeff_lterm']
-    coeff_R = params['coeff_R']
+    param_mterm = params['param_mterm']
+    param_lterm = params['param_lterm']
+    param_R = params['param_R']
+    param_U_upper  = params['param_U_upper']
+    param_U_lower = params['param_U_lower']
+    param_X_upper = params['param_X_upper']
+    param_X_lower = params['param_X_lower']
 
     mpc = do_mpc.controller.MPC(model)
     mpc.set_param(**setup_mpc)
@@ -52,95 +56,95 @@ def MPC_Controller(model, params, setup_mpc, silence_solver = False):
         mpc.settings.supress_ipopt_output()
 
     # set model objective function
-    # mterm = coeff_mterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
+    # mterm = param_mterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
     #          - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
-    # lterm = coeff_lterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
+    # lterm = param_lterm * (-model._x['x0'] - model._x['x1'] - model._x['x2'] - model._x['x3']
     #          - model._x['x4'] - model._x['x5'] - model._x['x6'] - model._x['x7'])
 
-    mterm = coeff_mterm * ((fabs(model._x['x0']-params['desire_occu']) + fabs(model._x['x1']-params['desire_occu']) +
-                            fabs(model._x['x2']-params['desire_occu'])) + fabs(model._x['x3']-params['desire_occu']) +
-                            fabs(model._x['x4']-params['desire_occu']) + fabs(model._x['x5']-params['desire_occu']) +
-                            fabs(model._x['x6'] - params['desire_occu']) + fabs(model._x['x7'] - params['desire_occu']))
+    mterm = param_mterm * ((model._x['x0'] - params['desire_occu'])**2 + (model._x['x1'] - params['desire_occu'])**2 +
+                            (model._x['x2'] - params['desire_occu'])**2 + (model._x['x3'] - params['desire_occu'])**2 +
+                            (model._x['x4'] - params['desire_occu'])**2 + (model._x['x5'] - params['desire_occu'])**2 +
+                            (model._x['x6'] - params['desire_occu'])**2 + (model._x['x7'] - params['desire_occu'])**2)
 
-    lterm = coeff_lterm * ((fabs(model._x['x0'] - params['desire_occu']) + fabs(model._x['x1'] - params['desire_occu']) +
-                            fabs(model._x['x2'] - params['desire_occu'])) + fabs(model._x['x3'] - params['desire_occu']) +
-                            fabs(model._x['x4'] - params['desire_occu']) + fabs(model._x['x5'] - params['desire_occu']) +
-                            fabs(model._x['x6'] - params['desire_occu']) + fabs(model._x['x7'] - params['desire_occu']))
+    lterm = param_lterm * ((model._x['x0'] - params['desire_occu'])**2 + (model._x['x1'] - params['desire_occu'])**2 +
+                            (model._x['x2'] - params['desire_occu'])**2 + (model._x['x3'] - params['desire_occu'])**2 +
+                            (model._x['x4'] - params['desire_occu'])**2 + (model._x['x5'] - params['desire_occu'])**2 +
+                            (model._x['x6'] - params['desire_occu'])**2 + (model._x['x7'] - params['desire_occu'])**2)
 
 
     mpc.set_objective(mterm=mterm, lterm=lterm)
 
     mpc.set_rterm(
-        u0=coeff_R,
-        u1=coeff_R,
-        u2=coeff_R,
-        u3=coeff_R,
-        u4=coeff_R,
-        u5=coeff_R,
-        u6=coeff_R,
-        u7=coeff_R
+        u0=param_R,
+        u1=param_R,
+        u2=param_R,
+        u3=param_R,
+        u4=param_R,
+        u5=param_R,
+        u6=param_R,
+        u7=param_R
     )
 
     # state lower bound
-    mpc.bounds['lower', '_x', 'x0'] = 1
-    mpc.bounds['lower', '_x', 'x1'] = 1
-    mpc.bounds['lower', '_x', 'x2'] = 1
-    mpc.bounds['lower', '_x', 'x3'] = 1
-    mpc.bounds['lower', '_x', 'x4'] = 1
-    mpc.bounds['lower', '_x', 'x5'] = 1
-    mpc.bounds['lower', '_x', 'x6'] = 1
-    mpc.bounds['lower', '_x', 'x7'] = 1
+    mpc.bounds['lower', '_x', 'x0'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x1'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x2'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x3'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x4'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x5'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x6'] = param_X_lower
+    mpc.bounds['lower', '_x', 'x7'] = param_X_lower
 
     # state upper bound
-    mpc.bounds['upper', '_x', 'x0'] = 80
-    mpc.bounds['upper', '_x', 'x1'] = 80
-    mpc.bounds['upper', '_x', 'x2'] = 80
-    mpc.bounds['upper', '_x', 'x3'] = 80
-    mpc.bounds['upper', '_x', 'x4'] = 80
-    mpc.bounds['upper', '_x', 'x5'] = 80
-    mpc.bounds['upper', '_x', 'x6'] = 80
-    mpc.bounds['upper', '_x', 'x7'] = 80
+    mpc.bounds['upper', '_x', 'x0'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x1'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x2'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x3'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x4'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x5'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x6'] = param_X_upper
+    mpc.bounds['upper', '_x', 'x7'] = param_X_upper
 
     # control lower bound
-    mpc.bounds['lower', '_u', 'u0'] = 20
-    mpc.bounds['lower', '_u', 'u1'] = 20
-    mpc.bounds['lower', '_u', 'u2'] = 20
-    mpc.bounds['lower', '_u', 'u3'] = 20
-    mpc.bounds['lower', '_u', 'u4'] = 20
-    mpc.bounds['lower', '_u', 'u5'] = 20
-    mpc.bounds['lower', '_u', 'u6'] = 20
-    mpc.bounds['lower', '_u', 'u7'] = 20
+    mpc.bounds['lower', '_u', 'u0'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u1'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u2'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u3'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u4'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u5'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u6'] = param_U_lower
+    mpc.bounds['lower', '_u', 'u7'] = param_U_lower
 
     # control upper bound
-    mpc.bounds['upper', '_u', 'u0'] = 180
-    mpc.bounds['upper', '_u', 'u1'] = 180
-    mpc.bounds['upper', '_u', 'u2'] = 180
-    mpc.bounds['upper', '_u', 'u3'] = 180
-    mpc.bounds['upper', '_u', 'u4'] = 180
-    mpc.bounds['upper', '_u', 'u5'] = 180
-    mpc.bounds['upper', '_u', 'u6'] = 180
-    mpc.bounds['upper', '_u', 'u7'] = 180
+    mpc.bounds['upper', '_u', 'u0'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u1'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u2'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u3'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u4'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u5'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u6'] = param_U_upper
+    mpc.bounds['upper', '_u', 'u7'] = param_U_upper
 
     # set terminal lower bound for the state
-    mpc.terminal_bounds['lower', 'x0'] = 1
-    mpc.terminal_bounds['lower', 'x1'] = 1
-    mpc.terminal_bounds['lower', 'x2'] = 1
-    mpc.terminal_bounds['lower', 'x3'] = 1
-    mpc.terminal_bounds['lower', 'x4'] = 1
-    mpc.terminal_bounds['lower', 'x5'] = 1
-    mpc.terminal_bounds['lower', 'x6'] = 1
-    mpc.terminal_bounds['lower', 'x7'] = 1
+    mpc.terminal_bounds['lower', 'x0'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x1'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x2'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x3'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x4'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x5'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x6'] = param_X_lower
+    mpc.terminal_bounds['lower', 'x7'] = param_X_lower
 
 
     # set terminal upper bound for the state
-    mpc.terminal_bounds['upper', 'x0'] = 80
-    mpc.terminal_bounds['upper', 'x1'] = 80
-    mpc.terminal_bounds['upper', 'x2'] = 80
-    mpc.terminal_bounds['upper', 'x3'] = 80
-    mpc.terminal_bounds['upper', 'x4'] = 80
-    mpc.terminal_bounds['upper', 'x5'] = 80
-    mpc.terminal_bounds['upper', 'x6'] = 80
-    mpc.terminal_bounds['upper', 'x7'] = 80
+    mpc.terminal_bounds['upper', 'x0'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x1'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x2'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x3'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x4'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x5'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x6'] = param_X_upper
+    mpc.terminal_bounds['upper', 'x7'] = param_X_upper
 
     mpc.setup()
 
