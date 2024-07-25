@@ -26,8 +26,8 @@ model = Flow_Dynamics_Model(equations)
 # configure the MPC Controller
 mpc = MPC_Controller(model, params=MPC_params, setup_mpc=setup_mpc, silence_solver=False)
 
-run_simulation_MPC(mpc_controller= mpc, total_sim_step=total_sim_step, control_interval=control_interval,
-                   files_out_dict="Loop_Data_Ramp_MPC/", meter_rate_dict="Results/Meter_Rate_MPCRefine.csv")
+run_simulation_MPC(sumoBinary="sumo", mpc_controller= mpc, total_sim_step=total_sim_step, control_interval=control_interval,
+                   files_out_dict="Loop_Data_Ramp_MPC/", meter_rate_dict="Results/Meter_Rate_MPC.csv")
 
 # Directory where all xml files are stored
 xml_dict = "Network_Files_2/Loop_Data_Ramp_MPC/"

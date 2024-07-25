@@ -108,8 +108,9 @@ def run_simulation_MPC(mpc_controller, total_sim_step = 7200, control_interval =
 
 
 
-def run_simulation_ALIANA(sumoBinary = "sumo-gui", total_sim_step = 7200, control_interval = 180, r_min = 100, r_max = 1800,
-                          occu_desire=25, K_R = 40, warning = True, files_out_dict = "Loop_Data_Ramp_ALIANA/"):
+def run_simulation_ALIANA(sumoBinary = "sumo-gui", total_sim_step = 7200, control_interval = 180,
+                          r_min = 100, r_max = 1800, occu_desire=25, K_R = 40, warning = True,
+                          files_out_dict = "Loop_Data_Ramp_ALIANA/", meter_rate_dict = "Results/Meter_Rate_ALIANA.csv",):
 
     if warning:
         sumoCmd = [sumoBinary, "-c", cfg_dict, "--output-prefix", files_out_dict]
@@ -173,7 +174,7 @@ def run_simulation_ALIANA(sumoBinary = "sumo-gui", total_sim_step = 7200, contro
         print("Simulation Step:" + str(step))
 
     traci.close()
-    meter_rate_table.to_csv('Results/Meter_Rate_ALIANA.csv', index=False)
+    meter_rate_table.to_csv(meter_rate_dict, index=False)
 
 def run_simulation_ramp_close(sumoBinary = "sumo-gui", total_sim_step = 7200, control_interval = 180, green_duation = 5, warning = True, files_out_dict = "Loop_Data_Ramp_Close/"):
     """

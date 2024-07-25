@@ -7,8 +7,8 @@ if __name__ == '__main__':
     total_sim_step = params['total_sim_step']
     control_interval = params['control_interval']
 
-    run_scenarios = "No Control"
-    # run_scenarios = "ALIANA"
+    # run_scenarios = "No Control"
+    run_scenarios = "ALIANA"
 
     if run_scenarios == "No Control":
         run_simulation_ramp_open(sumoBinary= "sumo", total_sim_step=total_sim_step, control_interval=control_interval)
@@ -22,7 +22,8 @@ if __name__ == '__main__':
             xml_file = os.path.join(xml_dict, file)
             xml_to_csv(xml_file, path='Sim_Results/Ramp_Open/')
     elif run_scenarios == "ALIANA":
-        run_simulation_ALIANA(sumoBinary= "sumo", total_sim_step=total_sim_step, control_interval=control_interval)
+        run_simulation_ALIANA(sumoBinary= "sumo-gui", total_sim_step=total_sim_step, occu_desire= 20, r_min=300,
+                              control_interval=control_interval, meter_rate_dict = "Results/Meter_Rate_ALIANA.csv")
 
         # Directory where all xml files are stored
         xml_dict = "Network_Files_2/Loop_Data_Ramp_ALIANA/"

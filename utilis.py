@@ -8,11 +8,11 @@ params['control_interval'] = 60
 MPC_params = {
     'param_mterm' : 1,
     'param_lterm' : 1,
-    'param_R' : 0.001,
-    'desire_occu' : 25,
+    'param_R' : 0.0001,
+    'desire_occu' : 20,
     'param_U_upper': 180,
-    'param_U_lower': 10,
-    'param_X_upper': 50,
+    'param_U_lower': 30,
+    'param_X_upper': 80,
     'param_X_lower': 0
 }
 

@@ -13,12 +13,12 @@ control_interval = params['control_interval']
 flow_all, _, occupancy_all, flow_dt, _, occupancy_dt = data_loader_main(csv_dict='Sim_Results/Ramp_MPC')
 
 # import ramp metering data
-control_input = pd.read_csv('Results/Meter_Rate_MPCRefine.csv')
+control_input = pd.read_csv('Results/Meter_Rate_MPC.csv')
 
 control_input = control_input/10
 
 # obtain ODE equations
-equations = SINDy_Dynamics(x = occupancy_all, dx = occupancy_dt, u = control_input, threshold = 0.005)
+equations = SINDy_Dynamics(x = occupancy_all, dx = occupancy_dt, u = control_input, threshold = 0.002)
 
 # configure dynamics model
 model = Flow_Dynamics_Model(equations)
