@@ -33,7 +33,6 @@ def run_simulation_MPC(mpc_controller, total_sim_step = 7200, control_interval =
 
     meter_list = traci.trafficlight.getIDList()
     meter_list = sorted(meter_list)
-    #meter_list = meter_list[3:]
 
     total_control_step = int(total_sim_step / control_interval)
 
@@ -70,6 +69,7 @@ def run_simulation_MPC(mpc_controller, total_sim_step = 7200, control_interval =
                 # for loop in station_loops:
                 #     veh_number += traci.inductionloop.getSubscriptionResults(loop)[tc.VAR_LAST_INTERVAL_NUMBER]
                 # x0[station] = veh_number
+
                 # for station loops collecting occupancy
                 for loop in station_loops:
                     total_occu += traci.inductionloop.getSubscriptionResults(loop)[tc.VAR_LAST_INTERVAL_OCCUPANCY]
