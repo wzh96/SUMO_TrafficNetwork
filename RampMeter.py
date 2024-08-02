@@ -15,7 +15,7 @@ def change_meter_rate_random(meter, meter_rate, green_duration = 2, control_step
     # retrieve ramp metering rate from the list
     rate = float(meter_rate.loc[control_step, meter])
     # calculate red duration based on green duration and ramp metering rate
-    red_duration = ((1 - rate) * green_duration) / rate
+    red_duration = (3600 - rate * green_duration) / rate
     signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
     for phase in signal_program.phases:
         if 'r' in phase.state:
@@ -79,7 +79,7 @@ def ramp_open(meter):
     traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
 
 
-def MeterRate_RandomGenerte(meter_list, total_step, min_rate=0.1, max_rate=1, max_diff=0.2):
+def MeterRate_RandomGenerte(meter_list, total_step, min_rate=100, max_rate=1800, max_diff=400):
     """
     :param meter_list: list of all ramp metering signal IDs
     :param total_step: total control step = total sim step/ control interval

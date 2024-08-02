@@ -3,8 +3,8 @@ import numpy as np
 import os
 
 # Directory where all xml files are stored
-xml_dict = "Network_Files_2/Loop_Data_Ramp_ALIANA"
-file_list = os.listdir(xml_dict)
+xml_dict = "Network_Files_3/Loop_Data_Ramp_ALIANA"
+file_list = [file for file in os.listdir(xml_dict) if file.endswith('.xml')]
 
 station_list = [
     f"{parts[0]}_{parts[1]}" if len(parts) > 2 else os.path.splitext(f"{parts[0]}_{parts[1]}")[0]
@@ -60,6 +60,14 @@ def data_loader_main(csv_dict = "Sim_Results/Ramp_Random"):
     flow_dt, speed_dt, occupancy_dt = (pd.DataFrame(np.gradient(flow_all, 1)[0], columns=flow_all.columns),
                                        pd.DataFrame(np.gradient(speed_all, 1)[0], columns=speed_all.columns),
                                        pd.DataFrame(np.gradient(occupancy_all, 1)[0], columns=occupancy_all.columns))
+    # remove the last observation of flow, occupancy, and speed.
+    # flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt = (flow_all.iloc[:-1],
+    #                                                                        speed_all.iloc[:-1],
+    #                                                                        occupancy_all.iloc[:-1],
+    #                                                                        flow_dt.iloc[:-1],
+    #                                                                        speed_dt.iloc[:-1],
+    #                                                                        occupancy_dt.iloc[:-1])
+
 
     return flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt
 
@@ -101,6 +109,14 @@ def data_loader_inout(csv_dict = "Sim_Results/Ramp_Random"):
                                        pd.DataFrame(np.gradient(speed_all, 1)[0], columns=speed_all.columns),
                                        pd.DataFrame(np.gradient(occupancy_all, 1)[0], columns=occupancy_all.columns))
 
+    # # remove the last observation of flow, occupancy, and speed.
+    # flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt = (flow_all.iloc[:-1],
+    #                                                                        speed_all.iloc[:-1],
+    #                                                                        occupancy_all.iloc[:-1],
+    #                                                                        flow_dt.iloc[:-1],
+    #                                                                        speed_dt.iloc[:-1],
+    #                                                                        occupancy_dt.iloc[:-1])
+
     return flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt
 
 def data_loader_ramp(csv_dict = "Sim_Results/Ramp_Random"):
@@ -140,5 +156,13 @@ def data_loader_ramp(csv_dict = "Sim_Results/Ramp_Random"):
     flow_dt, speed_dt, occupancy_dt = (pd.DataFrame(np.gradient(flow_all, 1)[0], columns=flow_all.columns),
                                        pd.DataFrame(np.gradient(speed_all, 1)[0], columns=speed_all.columns),
                                        pd.DataFrame(np.gradient(occupancy_all, 1)[0], columns=occupancy_all.columns))
+
+    # remove the last observation of flow, occupancy, and speed.
+    # flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt = (flow_all.iloc[:-1],
+    #                                                                        speed_all.iloc[:-1],
+    #                                                                        occupancy_all.iloc[:-1],
+    #                                                                        flow_dt.iloc[:-1],
+    #                                                                        speed_dt.iloc[:-1],
+    #                                                                        occupancy_dt.iloc[:-1])
 
     return flow_all, speed_all, occupancy_all, flow_dt, speed_dt, occupancy_dt

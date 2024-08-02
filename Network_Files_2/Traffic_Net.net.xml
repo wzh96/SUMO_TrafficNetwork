@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-07-11 14:32:19 by Eclipse SUMO netedit Version 1.19.0
+<!-- generated on 2024-07-31 13:20:44 by Eclipse SUMO netedit Version 1.20.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <additional-files value="D:\Research_Projects\SUMO_TrafficNetwork\Network_Files_2\Traffic_Net.add.xml"/>
-        <sumo-net-file value="D:\Research_Projects\SUMO_TrafficNetwork\Network_Files_2\Traffic_Net.net.xml"/>
+        <additional-files value="/Users/zihangwei/Documents/SUMO_TrafficNetwork/Network_Files_2/Traffic_Net.add.xml"/>
+        <sumo-net-file value="/Users/zihangwei/Documents/SUMO_TrafficNetwork/Network_Files_2/Traffic_Net.net.xml"/>
     </input>
 
     <output>
-        <output-file value="D:\Research_Projects\SUMO_TrafficNetwork\Network_Files_2\Traffic_Net.net.xml"/>
+        <output-file value="/Users/zihangwei/Documents/SUMO_TrafficNetwork/Network_Files_2/Traffic_Net.net.xml"/>
         <output.street-names value="true"/>
     </output>
 
@@ -34,7 +34,7 @@
 </configuration>
 -->
 
-<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
 
     <location netOffset="-388382.22,-3747822.70" convBoundary="-7.18,0.00,10990.02,6818.97" origBoundary="-118.206847,33.865832,-118.088061,33.926592" projParameter="+proj=utm +zone=11 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
 
@@ -6461,18 +6461,6 @@
         <lane id="E0_4" index="4" speed="29.06" length="437.51" shape="2722.33,6814.19 2741.38,6716.33 2751.58,6630.37 2751.88,6544.76 2720.64,6379.10"/>
     </edge>
 
-    <tlLogic id="H10E_onMeter_1" type="static" programID="0" offset="0">
-        <phase duration="2"  state="GGGGGGG"/>
-        <phase duration="5"  state="rGGGGGG"/>
-    </tlLogic>
-    <tlLogic id="H10E_onMeter_2" type="static" programID="0" offset="0">
-        <phase duration="2"  state="GGGGGG"/>
-        <phase duration="5"  state="rGGGGG"/>
-    </tlLogic>
-    <tlLogic id="H10E_onMeter_3" type="static" programID="0" offset="0">
-        <phase duration="2"  state="GGGGGG"/>
-        <phase duration="5"  state="rGGGGG"/>
-    </tlLogic>
     <tlLogic id="H10E_onMeter_4" type="static" programID="0" offset="0">
         <phase duration="2"  state="GGGGGGG"/>
         <phase duration="5"  state="rGGGGGG"/>
@@ -6486,10 +6474,6 @@
         <phase duration="5"  state="rGGGGG"/>
     </tlLogic>
     <tlLogic id="H10E_onMeter_7" type="static" programID="0" offset="0">
-        <phase duration="2"  state="GGGGGGG"/>
-        <phase duration="5"  state="rGGGGGG"/>
-    </tlLogic>
-    <tlLogic id="H10E_onMeter_8" type="static" programID="0" offset="0">
         <phase duration="2"  state="GGGGGGG"/>
         <phase duration="5"  state="rGGGGGG"/>
     </tlLogic>
@@ -6621,7 +6605,7 @@
         <request index="5" response="0000000" foes="0000000" cont="0"/>
         <request index="6" response="0000000" foes="0000000" cont="0"/>
     </junction>
-    <junction id="1361122135" type="traffic_light" x="4722.11" y="1276.94" incLanes="399475321_0 27630863_0 27630863_1 27630863_2 27630863_3 27630863_4" intLanes=":1361122135_0_0 :1361122135_1_0 :1361122135_1_1 :1361122135_1_2 :1361122135_1_3 :1361122135_1_4" shape="4722.79,1285.03 4724.56,1265.91 4722.04,1265.59 4719.57,1284.68">
+    <junction id="1361122135" type="priority" x="4722.11" y="1276.94" incLanes="399475321_0 27630863_0 27630863_1 27630863_2 27630863_3 27630863_4" intLanes=":1361122135_0_0 :1361122135_1_0 :1361122135_1_1 :1361122135_1_2 :1361122135_1_3 :1361122135_1_4" shape="4722.79,1285.03 4724.56,1265.91 4722.04,1265.59 4719.57,1284.68">
         <request index="0" response="000000" foes="000000" cont="0"/>
         <request index="1" response="000000" foes="000000" cont="0"/>
         <request index="2" response="000000" foes="000000" cont="0"/>
@@ -6737,7 +6721,7 @@
         <request index="4" response="000000" foes="000000" cont="0"/>
         <request index="5" response="000000" foes="000000" cont="0"/>
     </junction>
-    <junction id="1839471549" type="traffic_light" x="2300.22" y="1295.45" incLanes="173115707_0 123456261_0 123456261_1 123456261_2 123456261_3 123456261_4 123456261_5" intLanes=":1839471549_0_0 :1839471549_1_0 :1839471549_1_1 :1839471549_1_2 :1839471549_1_3 :1839471549_1_4 :1839471549_1_5" shape="2301.75,1305.04 2301.67,1282.64 2298.65,1282.65 2298.77,1305.06">
+    <junction id="1839471549" type="priority" x="2300.22" y="1295.45" incLanes="173115707_0 123456261_0 123456261_1 123456261_2 123456261_3 123456261_4 123456261_5" intLanes=":1839471549_0_0 :1839471549_1_0 :1839471549_1_1 :1839471549_1_2 :1839471549_1_3 :1839471549_1_4 :1839471549_1_5" shape="2301.75,1305.04 2301.67,1282.64 2298.65,1282.65 2298.77,1305.06">
         <request index="0" response="0000000" foes="0000000" cont="0"/>
         <request index="1" response="0000000" foes="0000000" cont="0"/>
         <request index="2" response="0000000" foes="0000000" cont="0"/>
@@ -7083,7 +7067,7 @@
         <request index="4" response="000000" foes="000000" cont="0"/>
         <request index="5" response="000000" foes="000000" cont="0"/>
     </junction>
-    <junction id="303461056" type="traffic_light" x="3913.14" y="1180.30" incLanes="381275042_0 866318171_0 866318171_1 866318171_2 866318171_3 866318171_4" intLanes=":303461056_0_0 :303461056_1_0 :303461056_1_1 :303461056_1_2 :303461056_1_3 :303461056_1_4" shape="3914.73,1188.28 3914.51,1169.08 3911.49,1169.09 3911.75,1188.32">
+    <junction id="303461056" type="priority" x="3913.14" y="1180.30" incLanes="381275042_0 866318171_0 866318171_1 866318171_2 866318171_3 866318171_4" intLanes=":303461056_0_0 :303461056_1_0 :303461056_1_1 :303461056_1_2 :303461056_1_3 :303461056_1_4" shape="3914.73,1188.28 3914.51,1169.08 3911.49,1169.09 3911.75,1188.32">
         <request index="0" response="000000" foes="000000" cont="0"/>
         <request index="1" response="000000" foes="000000" cont="0"/>
         <request index="2" response="000000" foes="000000" cont="0"/>
@@ -7143,7 +7127,7 @@
         <request index="4" response="000000" foes="000000" cont="0"/>
         <request index="5" response="000000" foes="000000" cont="0"/>
     </junction>
-    <junction id="303465912" type="traffic_light" x="7918.36" y="1159.20" incLanes="399513939_0 27631106_0 27631106_1 27631106_2 27631106_3 27631106_4 27631106_5" intLanes=":303465912_0_0 :303465912_1_0 :303465912_1_1 :303465912_1_2 :303465912_1_3 :303465912_1_4 :303465912_1_5" shape="7919.52,1168.84 7920.14,1146.44 7916.71,1146.39 7917.11,1168.82">
+    <junction id="303465912" type="priority" x="7918.36" y="1159.20" incLanes="399513939_0 27631106_0 27631106_1 27631106_2 27631106_3 27631106_4 27631106_5" intLanes=":303465912_0_0 :303465912_1_0 :303465912_1_1 :303465912_1_2 :303465912_1_3 :303465912_1_4 :303465912_1_5" shape="7919.52,1168.84 7920.14,1146.44 7916.71,1146.39 7917.11,1168.82">
         <request index="0" response="0000000" foes="0000000" cont="0"/>
         <request index="1" response="0000000" foes="0000000" cont="0"/>
         <request index="2" response="0000000" foes="0000000" cont="0"/>
@@ -8333,12 +8317,12 @@
     <connection from="123456259" to="123456248" fromLane="1" toLane="2" via=":1376691463_1_1" dir="s" state="M"/>
     <connection from="123456259" to="123456248" fromLane="2" toLane="3" via=":1376691463_1_2" dir="s" state="M"/>
     <connection from="123456259" to="123456248" fromLane="3" toLane="4" via=":1376691463_1_3" dir="s" state="M"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="0" toLane="1" via=":1839471549_1_0" tl="H10E_onMeter_1" linkIndex="1" dir="s" state="O"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="1" toLane="2" via=":1839471549_1_1" tl="H10E_onMeter_1" linkIndex="2" dir="s" state="O"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="2" toLane="3" via=":1839471549_1_2" tl="H10E_onMeter_1" linkIndex="3" dir="s" state="O"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="3" toLane="4" via=":1839471549_1_3" tl="H10E_onMeter_1" linkIndex="4" dir="s" state="O"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="4" toLane="5" via=":1839471549_1_4" tl="H10E_onMeter_1" linkIndex="5" dir="s" state="O"/>
-    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="5" toLane="6" via=":1839471549_1_5" tl="H10E_onMeter_1" linkIndex="6" dir="s" state="O"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="0" toLane="1" via=":1839471549_1_0" dir="s" state="M"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="1" toLane="2" via=":1839471549_1_1" dir="s" state="M"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="2" toLane="3" via=":1839471549_1_2" dir="s" state="M"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="3" toLane="4" via=":1839471549_1_3" dir="s" state="M"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="4" toLane="5" via=":1839471549_1_4" dir="s" state="M"/>
+    <connection from="123456261" to="52036514#1-AddedOnRampEdge" fromLane="5" toLane="6" via=":1839471549_1_5" dir="s" state="M"/>
     <connection from="123456264" to="123456249" fromLane="0" toLane="2" via=":322390650_2_0" dir="s" state="M"/>
     <connection from="123456264" to="123456249" fromLane="1" toLane="3" via=":322390650_2_1" dir="s" state="M"/>
     <connection from="123456264" to="123456249" fromLane="2" toLane="4" via=":322390650_2_2" dir="s" state="M"/>
@@ -8509,7 +8493,7 @@
     <connection from="172743611#1" to="121647270" fromLane="6" toLane="6" via=":29468605_0_6" dir="s" state="M"/>
     <connection from="173115701" to="124356717-AddedOnRampEdge" fromLane="0" toLane="0" via=":10565360_0_0" dir="s" state="M"/>
     <connection from="173115701" to="124356717-AddedOnRampEdge" fromLane="1" toLane="1" via=":10565360_0_1" dir="s" state="M"/>
-    <connection from="173115707" to="52036514#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":1839471549_0_0" tl="H10E_onMeter_1" linkIndex="0" dir="s" state="O"/>
+    <connection from="173115707" to="52036514#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":1839471549_0_0" dir="s" state="M"/>
     <connection from="173115708" to="123456256" fromLane="0" toLane="0" via=":1376691468_4_0" dir="s" state="M"/>
     <connection from="173115712" to="399475313" fromLane="0" toLane="0" via=":4022133341_0_0" dir="s" state="M"/>
     <connection from="173115712" to="399475313" fromLane="0" toLane="1" via=":4022133341_0_1" dir="s" state="M"/>
@@ -8589,11 +8573,11 @@
     <connection from="27630861" to="27630863" fromLane="3" toLane="2" via=":303461057_1_2" dir="s" state="M"/>
     <connection from="27630861" to="27630863" fromLane="4" toLane="3" via=":303461057_1_3" dir="s" state="M"/>
     <connection from="27630861" to="27630863" fromLane="5" toLane="4" via=":303461057_1_4" dir="s" state="M"/>
-    <connection from="27630863" to="121647278" fromLane="0" toLane="1" via=":1361122135_1_0" tl="H10E_onMeter_3" linkIndex="1" dir="s" state="O"/>
-    <connection from="27630863" to="121647278" fromLane="1" toLane="2" via=":1361122135_1_1" tl="H10E_onMeter_3" linkIndex="2" dir="s" state="O"/>
-    <connection from="27630863" to="121647278" fromLane="2" toLane="3" via=":1361122135_1_2" tl="H10E_onMeter_3" linkIndex="3" dir="s" state="O"/>
-    <connection from="27630863" to="121647278" fromLane="3" toLane="4" via=":1361122135_1_3" tl="H10E_onMeter_3" linkIndex="4" dir="s" state="O"/>
-    <connection from="27630863" to="121647278" fromLane="4" toLane="5" via=":1361122135_1_4" tl="H10E_onMeter_3" linkIndex="5" dir="s" state="O"/>
+    <connection from="27630863" to="121647278" fromLane="0" toLane="1" via=":1361122135_1_0" dir="s" state="M"/>
+    <connection from="27630863" to="121647278" fromLane="1" toLane="2" via=":1361122135_1_1" dir="s" state="M"/>
+    <connection from="27630863" to="121647278" fromLane="2" toLane="3" via=":1361122135_1_2" dir="s" state="M"/>
+    <connection from="27630863" to="121647278" fromLane="3" toLane="4" via=":1361122135_1_3" dir="s" state="M"/>
+    <connection from="27630863" to="121647278" fromLane="4" toLane="5" via=":1361122135_1_4" dir="s" state="M"/>
     <connection from="27630865" to="173115712" fromLane="0" toLane="0" via=":1839471512_0_0" dir="s" state="M"/>
     <connection from="27630865" to="862732271" fromLane="1" toLane="0" via=":1839471512_1_0" dir="s" state="M"/>
     <connection from="27630865" to="862732271" fromLane="2" toLane="1" via=":1839471512_1_1" dir="s" state="M"/>
@@ -8621,12 +8605,12 @@
     <connection from="27631054#1-AddedOnRampEdge" to="27631054#1" fromLane="3" toLane="2" via=":27631054#1-AddedOnRampNode_0_2" dir="s" state="M"/>
     <connection from="27631054#1-AddedOnRampEdge" to="27631054#1" fromLane="4" toLane="3" via=":27631054#1-AddedOnRampNode_0_3" dir="s" state="M"/>
     <connection from="27631054#1-AddedOnRampEdge" to="27631054#1" fromLane="5" toLane="4" via=":27631054#1-AddedOnRampNode_0_4" dir="s" state="M"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="0" toLane="1" via=":303465912_1_0" tl="H10E_onMeter_8" linkIndex="1" dir="s" state="O"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="1" toLane="2" via=":303465912_1_1" tl="H10E_onMeter_8" linkIndex="2" dir="s" state="O"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="2" toLane="3" via=":303465912_1_2" tl="H10E_onMeter_8" linkIndex="3" dir="s" state="O"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="3" toLane="4" via=":303465912_1_3" tl="H10E_onMeter_8" linkIndex="4" dir="s" state="O"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="4" toLane="5" via=":303465912_1_4" tl="H10E_onMeter_8" linkIndex="5" dir="s" state="O"/>
-    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="5" toLane="6" via=":303465912_1_5" tl="H10E_onMeter_8" linkIndex="6" dir="s" state="O"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="0" toLane="1" via=":303465912_1_0" dir="s" state="M"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="1" toLane="2" via=":303465912_1_1" dir="s" state="M"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="2" toLane="3" via=":303465912_1_2" dir="s" state="M"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="3" toLane="4" via=":303465912_1_3" dir="s" state="M"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="4" toLane="5" via=":303465912_1_4" dir="s" state="M"/>
+    <connection from="27631106" to="27143306#1-AddedOnRampEdge" fromLane="5" toLane="6" via=":303465912_1_5" dir="s" state="M"/>
     <connection from="27631111" to="404939392" fromLane="0" toLane="0" via=":1895742085_0_0" dir="s" state="M"/>
     <connection from="27631111" to="864668748" fromLane="1" toLane="0" via=":1895742085_1_0" dir="s" state="M"/>
     <connection from="27631111" to="864668748" fromLane="2" toLane="1" via=":1895742085_1_1" dir="s" state="M"/>
@@ -8781,7 +8765,7 @@
     <connection from="35568072.48" to="399517181" fromLane="1" toLane="0" via=":4022505675_0_0" dir="s" state="M"/>
     <connection from="35568110" to="608419126" fromLane="0" toLane="0" via=":1923406979_0_0" dir="s" state="M"/>
     <connection from="381275040" to="381275042" fromLane="1" toLane="0" via=":1839471497_0_0" dir="s" state="M"/>
-    <connection from="381275042" to="27630861" fromLane="0" toLane="0" via=":303461056_0_0" tl="H10E_onMeter_2" linkIndex="0" dir="s" state="O"/>
+    <connection from="381275042" to="27630861" fromLane="0" toLane="0" via=":303461056_0_0" dir="s" state="M"/>
     <connection from="38608486" to="38608489" fromLane="0" toLane="1" via=":36220294_0_0" dir="s" state="M"/>
     <connection from="38608486" to="38608489" fromLane="1" toLane="2" via=":36220294_0_1" dir="s" state="M"/>
     <connection from="38608486" to="38608489" fromLane="2" toLane="3" via=":36220294_0_2" dir="s" state="M"/>
@@ -8889,7 +8873,7 @@
     <connection from="399475310" to="172743611#1" fromLane="0" toLane="2" via=":1877394483_0_2" dir="s" state="m"/>
     <connection from="399475310" to="172743611#1" fromLane="0" toLane="3" via=":1877394483_0_3" dir="s" state="m"/>
     <connection from="399475315" to="398387509" fromLane="1" toLane="0" via=":4011495696_0_0" dir="s" state="M"/>
-    <connection from="399475321" to="121647278" fromLane="0" toLane="0" via=":1361122135_0_0" tl="H10E_onMeter_3" linkIndex="0" dir="s" state="O"/>
+    <connection from="399475321" to="121647278" fromLane="0" toLane="0" via=":1361122135_0_0" dir="s" state="M"/>
     <connection from="399491272" to="32018326" fromLane="0" toLane="0" via=":359137717_0_0" dir="s" state="M"/>
     <connection from="399491272" to="32018326" fromLane="0" toLane="1" via=":359137717_0_1" dir="s" state="M"/>
     <connection from="399491273" to="123951216" fromLane="0" toLane="0" via=":384406710_4_0" dir="s" state="M"/>
@@ -8899,7 +8883,7 @@
     <connection from="399512806" to="184965533" fromLane="0" toLane="1" via=":4022464475_0_1" dir="s" state="M"/>
     <connection from="399512807" to="867240179" fromLane="0" toLane="0" via=":297838938_0_0" dir="s" state="M"/>
     <connection from="399512817.115" to="27631049#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":297838789_0_0" tl="H10E_onMeter_5" linkIndex="0" dir="s" state="O"/>
-    <connection from="399513939" to="27143306#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":303465912_0_0" tl="H10E_onMeter_8" linkIndex="0" dir="s" state="O"/>
+    <connection from="399513939" to="27143306#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":303465912_0_0" dir="s" state="M"/>
     <connection from="399517181" to="869148434" fromLane="0" toLane="0" via=":416793824_6_0" dir="s" state="M"/>
     <connection from="399666000.206" to="54034955#1-AddedOnRampEdge" fromLane="0" toLane="0" via=":359141831_0_0" dir="s" state="M"/>
     <connection from="399666001" to="13271402" fromLane="1" toLane="0" via=":4023725259_0_0" dir="s" state="M"/>
@@ -9222,11 +9206,11 @@
     <connection from="866217733" to="866217732" fromLane="4" toLane="3" via=":303464652_1_3" dir="s" state="M"/>
     <connection from="866217733" to="866217732" fromLane="5" toLane="4" via=":303464652_1_4" dir="s" state="M"/>
     <connection from="866217733" to="866217732" fromLane="6" toLane="5" via=":303464652_1_5" dir="s" state="M"/>
-    <connection from="866318171" to="27630861" fromLane="0" toLane="1" via=":303461056_1_0" tl="H10E_onMeter_2" linkIndex="1" dir="s" state="O"/>
-    <connection from="866318171" to="27630861" fromLane="1" toLane="2" via=":303461056_1_1" tl="H10E_onMeter_2" linkIndex="2" dir="s" state="O"/>
-    <connection from="866318171" to="27630861" fromLane="2" toLane="3" via=":303461056_1_2" tl="H10E_onMeter_2" linkIndex="3" dir="s" state="O"/>
-    <connection from="866318171" to="27630861" fromLane="3" toLane="4" via=":303461056_1_3" tl="H10E_onMeter_2" linkIndex="4" dir="s" state="O"/>
-    <connection from="866318171" to="27630861" fromLane="4" toLane="5" via=":303461056_1_4" tl="H10E_onMeter_2" linkIndex="5" dir="s" state="O"/>
+    <connection from="866318171" to="27630861" fromLane="0" toLane="1" via=":303461056_1_0" dir="s" state="M"/>
+    <connection from="866318171" to="27630861" fromLane="1" toLane="2" via=":303461056_1_1" dir="s" state="M"/>
+    <connection from="866318171" to="27630861" fromLane="2" toLane="3" via=":303461056_1_2" dir="s" state="M"/>
+    <connection from="866318171" to="27630861" fromLane="3" toLane="4" via=":303461056_1_3" dir="s" state="M"/>
+    <connection from="866318171" to="27630861" fromLane="4" toLane="5" via=":303461056_1_4" dir="s" state="M"/>
     <connection from="866329792" to="123456255" fromLane="0" toLane="1" via=":681283262_0_0" dir="s" state="M"/>
     <connection from="866329792" to="123456255" fromLane="1" toLane="2" via=":681283262_0_1" dir="s" state="M"/>
     <connection from="866329792" to="123456255" fromLane="2" toLane="3" via=":681283262_0_2" dir="s" state="M"/>

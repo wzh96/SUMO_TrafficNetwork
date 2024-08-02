@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-30 16:50:22 by Eclipse SUMO netedit Version 1.20.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Detectors -->
+    <inductionLoop id="H10E_1_0" lane="969750892_0" pos="59.68" period="120.00" file="H10E_1_0.xml"/>
+    <inductionLoop id="H10E_1_1" lane="969750892_1" pos="59.68" period="120.00" file="H10E_1_1.xml"/>
+    <inductionLoop id="H10E_1_2" lane="969750892_2" pos="59.68" period="120.00" file="H10E_1_2.xml"/>
+    <inductionLoop id="H10E_1_3" lane="969750892_3" pos="59.68" period="120.00" file="H10E_1_3.xml"/>
+    <inductionLoop id="H10E_1_4" lane="969750892_4" pos="59.68" period="120.00" file="H10E_1_4.xml"/>
+    <inductionLoop id="H10E_1_5" lane="969750892_5" pos="59.68" period="120.00" file="H10E_1_5.xml"/>
+
+    <inductionLoop id="H10E_2_0" lane="33590257_0" pos="99.63" period="120.00" file="H10E_2_0.xml"/>
+    <inductionLoop id="H10E_2_1" lane="33590257_1" pos="99.63" period="120.00" file="H10E_2_1.xml"/>
+    <inductionLoop id="H10E_2_2" lane="33590257_2" pos="99.63" period="120.00" file="H10E_2_2.xml"/>
+    <inductionLoop id="H10E_2_3" lane="33590257_3" pos="99.63" period="120.00" file="H10E_2_3.xml"/>
+    <inductionLoop id="H10E_2_4" lane="33590257_4" pos="99.63" period="120.00" file="H10E_2_4.xml"/>
+    <inductionLoop id="H10E_2_5" lane="33590257_5" pos="99.63" period="120.00" file="H10E_2_5.xml"/>
+
+    <inductionLoop id="H10E_3_0" lane="156415539#2-AddedOnRampEdge_0" pos="52.90" period="120.00" file="H10E_3_0.xml"/>
+    <inductionLoop id="H10E_3_1" lane="156415539#2-AddedOnRampEdge_1" pos="52.90" period="120.00" file="H10E_3_1.xml"/>
+    <inductionLoop id="H10E_3_2" lane="156415539#2-AddedOnRampEdge_2" pos="52.90" period="120.00" file="H10E_3_2.xml"/>
+    <inductionLoop id="H10E_3_3" lane="156415539#2-AddedOnRampEdge_3" pos="52.90" period="120.00" file="H10E_3_3.xml"/>
+    <inductionLoop id="H10E_3_4" lane="156415539#2-AddedOnRampEdge_4" pos="52.90" period="120.00" file="H10E_3_4.xml"/>
+    <inductionLoop id="H10E_3_5" lane="156415539#2-AddedOnRampEdge_5" pos="52.90" period="120.00" file="H10E_3_5.xml"/>
+
+    <inductionLoop id="H15N_1_0" lane="124100069_0" pos="61.67" period="120.00" file="H15N_1_0.xml"/>
+    <inductionLoop id="H15N_1_1" lane="124100069_1" pos="61.67" period="120.00" file="H15N_1_1.xml"/>
+    <inductionLoop id="H15N_1_2" lane="124100069_2" pos="61.67" period="120.00" file="H15N_1_2.xml"/>
+    <inductionLoop id="H15N_1_3" lane="124100069_3" pos="61.67" period="120.00" file="H15N_1_3.xml"/>
+    <inductionLoop id="H15N_1_4" lane="124100069_4" pos="61.67" period="120.00" file="H15N_1_4.xml"/>
+
+    <inductionLoop id="H15N_2_0" lane="404280189_0" pos="75.85" period="120.00" file="H15N_2_0.xml"/>
+    <inductionLoop id="H15N_2_1" lane="404280189_1" pos="75.85" period="120.00" file="H15N_2_1.xml"/>
+    <inductionLoop id="H15N_2_2" lane="404280189_2" pos="75.85" period="120.00" file="H15N_2_2.xml"/>
+    <inductionLoop id="H15N_2_3" lane="404280189_3" pos="75.85" period="120.00" file="H15N_2_3.xml"/>
+    <inductionLoop id="H15N_2_4" lane="404280189_4" pos="75.85" period="120.00" file="H15N_2_4.xml"/>
+    <inductionLoop id="H15N_2_5" lane="404280189_5" pos="75.85" period="120.00" file="H15N_2_5.xml"/>
+
+    <inductionLoop id="H25S_1_0" lane="36040739-AddedOnRampEdge_0" pos="47.78" period="120.00" file="H25S_1_0.xml"/>
+    <inductionLoop id="H25S_1_1" lane="36040739-AddedOnRampEdge_1" pos="47.78" period="120.00" file="H25S_1_1.xml"/>
+    <inductionLoop id="H25S_1_2" lane="36040739-AddedOnRampEdge_2" pos="47.78" period="120.00" file="H25S_1_2.xml"/>
+    <inductionLoop id="H25S_1_3" lane="36040739-AddedOnRampEdge_3" pos="47.78" period="120.00" file="H25S_1_3.xml"/>
+    <inductionLoop id="H25S_1_4" lane="36040739-AddedOnRampEdge_4" pos="47.78" period="120.00" file="H25S_1_4.xml"/>
+    <inductionLoop id="H25S_1_5" lane="36040739-AddedOnRampEdge_5" pos="47.78" period="120.00" file="H25S_1_5.xml"/>
+
+    <inductionLoop id="H25S_2_0" lane="863796619-AddedOnRampEdge_0" pos="42.28" period="120.00" file="H25S_2_0.xml"/>
+    <inductionLoop id="H25S_2_1" lane="863796619-AddedOnRampEdge_1" pos="42.28" period="120.00" file="H25S_2_1.xml"/>
+    <inductionLoop id="H25S_2_2" lane="863796619-AddedOnRampEdge_2" pos="42.28" period="120.00" file="H25S_2_2.xml"/>
+    <inductionLoop id="H25S_2_3" lane="863796619-AddedOnRampEdge_3" pos="42.28" period="120.00" file="H25S_2_3.xml"/>
+    <inductionLoop id="H25S_2_4" lane="863796619-AddedOnRampEdge_4" pos="42.28" period="120.00" file="H25S_2_4.xml"/>
+
+    <inductionLoop id="H25S_3_0" lane="1023269928_0" pos="25.29" period="120.00" file="H25S_3_0.xml"/>
+    <inductionLoop id="H25S_3_1" lane="1023269928_1" pos="25.29" period="120.00" file="H25S_3_1.xml"/>
+    <inductionLoop id="H25S_3_2" lane="1023269928_2" pos="25.29" period="120.00" file="H25S_3_2.xml"/>
+    <inductionLoop id="H25S_3_3" lane="1023269928_3" pos="25.29" period="120.00" file="H25S_3_3.xml"/>
+    <inductionLoop id="H25S_3_4" lane="1023269928_4" pos="25.29" period="120.00" file="H25S_3_4.xml"/>
+</additional>

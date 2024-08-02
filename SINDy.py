@@ -13,10 +13,10 @@ def SINDy_Train(x, dx, u, threshold = 0.002):
     return model
 
 def SINDy_Dynamics(x, dx, u, threshold = 0.002):
-    # remove the first 5 seconds
-    x = x.iloc[5:, :].reset_index(drop=True)
-    dx = dx.iloc[5:, :].reset_index(drop=True)
-    u = u.iloc[5:, :].reset_index(drop=True)
+    # # remove the first 5 seconds
+    # x = x.iloc[2:, :].reset_index(drop=True)
+    # dx = dx.iloc[2:, :].reset_index(drop=True)
+    # u = u.iloc[2:, :].reset_index(drop=True)
 
     # call SINDy to obtain the dynamics model (ODE)
     model = SINDy_Train(x=x, dx=dx, u=u, threshold=threshold)
@@ -28,5 +28,6 @@ def SINDy_Dynamics(x, dx, u, threshold = 0.002):
         equations[i] = equations[i].replace(' ', ' * ')
         equations[i] = equations[i].replace('* + *', '+')
         equations[i] = equations[i].replace('^2', '**2')
+        equations[i] = equations[i].replace('^3', '**3')
 
     return equations
