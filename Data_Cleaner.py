@@ -39,7 +39,7 @@ def data_loader_main(csv_dict = "Sim_Results/Ramp_Random"):
         station_file_red = station_file_merged[['begin', 'end', 'id', 'flow', 'speed', 'occupancy']].copy()
         # station_file_red.rename(columns={'nVehContrib': 'flow'}, inplace=True)
         station_file_red.loc[:, 'flow_all'] = station_file_red[['flow']].sum(axis=1)
-        station_file_red[['speed']] = station_file_red[['speed']].replace(-1, np.nan, inplace=False)
+        station_file_red[['speed']] = station_file_red[['speed']].replace(-1, 0, inplace=False)
         station_file_red['speed_all'] = station_file_red[['speed']].mean(axis=1)
         station_file_red['occupancy_all'] = station_file_red[['occupancy']].mean(axis=1)
 
