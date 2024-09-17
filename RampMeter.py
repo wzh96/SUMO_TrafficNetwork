@@ -61,6 +61,45 @@ def ALIANA_Controller_Initial(meter, green_duration = 2, r_k = 1800):
     traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
     return r_k
 
+def PIALINEA_Controller(meter, r_pre, occu_down_pre, occu_down, occu_desire, K_P, K_R, r_min, r_max, green_duration = 2):
+    r_k = r_pre + K_P * (occu_down - occu_down_pre) + K_R * (occu_desire - occu_down)
+
+    if r_k > r_max:
+        r_k = r_max
+    elif r_k < r_min:
+        r_k = r_min
+
+    red_duration = (3600 - r_k * green_duration) / r_k
+    signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
+    for phase in signal_program.phases:
+        if 'r' in phase.state:
+            phase.duration = red_duration
+    traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
+    print(signal_program)
+    return r_k
+
+def FLALINEA_Controller(meter, r_pre, occu_down, flow_down, occu_desire, flow_desire,
+                        K_F, r_min, r_max, green_duration = 2):
+
+    if occu_down > occu_desire:
+        r_k = r_min
+    else:
+        r_k = r_pre + K_F * (flow_desire - flow_down)
+
+    if r_k > r_max:
+        r_k = r_max
+    elif r_k < r_min:
+        r_k = r_min
+
+    red_duration = (3600 - r_k * green_duration) / r_k
+    signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
+    for phase in signal_program.phases:
+        if 'r' in phase.state:
+            phase.duration = red_duration
+    traci.trafficlight.setCompleteRedYellowGreenDefinition(meter, signal_program)
+    print(signal_program)
+    return r_k
+
 def ramp_close(meter):
     signal_program = traci.trafficlight.getCompleteRedYellowGreenDefinition(meter)[0]
     for phase in signal_program.phases:

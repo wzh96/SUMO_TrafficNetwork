@@ -1,7 +1,7 @@
 import os
 import sys
 from RampMeter import MeterRate_RandomGenerte, change_meter_rate_random, ramp_close, ramp_open
-from RampMeter import ALIANA_Controller_Initial, ALIANA_Controller, change_meter_rate
+from RampMeter import ALIANA_Controller_Initial, ALIANA_Controller, change_meter_rate, PIALINEA_Controller, FLALINEA_Controller
 import traci
 import traci.constants as tc
 import numpy as np
@@ -298,6 +298,173 @@ def run_simulation_ALIANA(ALINEA_params, sumoBinary = "sumo-gui", total_sim_step
             # reset loop detectors subscription list
             for loop in loop_detector_list:
                 traci.inductionloop.subscribe(loop, (traci.constants.VAR_LAST_INTERVAL_OCCUPANCY, ))
+
+        traci.simulationStep()
+        step += 1
+        print("Simulation Step:" + str(step))
+
+    traci.close()
+    meter_rate_table.to_csv(meter_rate_dict, index=False)
+
+
+def run_simulation_PIALINEA(ALINEA_params, sumoBinary = "sumo-gui", total_sim_step = 7200, control_interval = 180,
+                          warning = True, cfg_dict = "Network_Files_2/Traffic_Net.sumo.cfg",
+                          files_out_dict = "Loop_Data_Ramp_PIALINEA/",
+                          meter_rate_dict = "Results/Meter_Rate_PIALINEA.csv",):
+
+    if warning:
+        sumoCmd = [sumoBinary, "-c", cfg_dict, "--output-prefix", files_out_dict]
+    else:
+        sumoCmd = [sumoBinary, "--no-warnings", "-c", cfg_dict, "--output-prefix", files_out_dict]
+
+    traci.start(sumoCmd)
+
+    meter_list = traci.trafficlight.getIDList()
+    meter_list = sorted(meter_list)
+
+    total_control_step = int(total_sim_step / control_interval)
+
+    # create a table to record meter rate for all meters
+    meter_rate_table = pd.DataFrame(np.zeros((total_control_step, len(meter_list))), columns = meter_list)
+    occu_table = pd.DataFrame(np.zeros((total_control_step, len(meter_list))), columns = meter_list)
+
+    loop_detector_list = traci.inductionloop.getIDList()
+
+    step = 0
+    while step < total_sim_step:
+
+        # set initial rate of all meters to 1800
+        if step == 0:
+            for meter in meter_list:
+
+                r_k_meter = ALIANA_Controller_Initial(meter, r_k=1800)
+                meter_rate_table.at[step / control_interval, meter] = r_k_meter
+
+            # at the initial step, scribe loop detectors for occupancy values
+            for loop in loop_detector_list:
+                traci.inductionloop.subscribe(loop, (tc.VAR_LAST_INTERVAL_OCCUPANCY,))
+
+        # change ramp metering rate
+        if step > 0 and step % control_interval == 0:
+            print("resetting ramp metering rate")
+
+            # loop through each meter
+            for meter in meter_list:
+                print(meter)
+                meter_parts = meter.split('_')
+                station = f"{meter_parts[0]}_{meter_parts[2]}"
+                downstream_loops = tuple(s for s in loop_detector_list if s.startswith(station))
+
+                # retrieve downstream occupancy
+                occus_down_station = {loop: None for loop in downstream_loops}
+                for loop in downstream_loops:
+                    occu_down_single = traci.inductionloop.getSubscriptionResults(loop)[tc.VAR_LAST_INTERVAL_OCCUPANCY]
+                    occus_down_station[loop] = occu_down_single
+                occu_down = sum(occus_down_station.values()) / len(occus_down_station)
+
+                #Apply ALIANA control
+                r_pre = meter_rate_table.at[(step/control_interval-1), meter]
+                occu_down_pre = occu_table.at[(step/control_interval-1), meter]
+
+                r_k_meter = PIALINEA_Controller(meter, r_pre=r_pre, occu_down_pre = occu_down_pre, occu_down=occu_down, occu_desire=ALINEA_params['desire_occu'],
+                                              K_P=ALINEA_params['K_P'], K_R=ALINEA_params['K_R'], r_min = ALINEA_params['r_min'], r_max = ALINEA_params['r_max'])
+
+                meter_rate_table.at[step / control_interval, meter] = r_k_meter
+                occu_table.at[step / control_interval, meter] = occu_down
+
+            # reset loop detectors subscription list
+            for loop in loop_detector_list:
+                traci.inductionloop.subscribe(loop, (traci.constants.VAR_LAST_INTERVAL_OCCUPANCY, ))
+
+        traci.simulationStep()
+        step += 1
+        print("Simulation Step:" + str(step))
+
+    traci.close()
+    meter_rate_table.to_csv(meter_rate_dict, index=False)
+
+
+def run_simulation_FLALINEA(ALINEA_params, sumoBinary = "sumo-gui", total_sim_step = 7200, control_interval = 180,
+                          warning = True, cfg_dict = "Network_Files_2/Traffic_Net.sumo.cfg",
+                          files_out_dict = "Loop_Data_Ramp_FLALINEA/",
+                          meter_rate_dict = "Results/Meter_Rate_FLALINEA.csv",):
+
+    if warning:
+        sumoCmd = [sumoBinary, "-c", cfg_dict, "--output-prefix", files_out_dict]
+    else:
+        sumoCmd = [sumoBinary, "--no-warnings", "-c", cfg_dict, "--output-prefix", files_out_dict]
+
+    traci.start(sumoCmd)
+
+    meter_list = traci.trafficlight.getIDList()
+    meter_list = sorted(meter_list)
+
+    total_control_step = int(total_sim_step / control_interval)
+
+    # create a table to record meter rate for all meters
+    meter_rate_table = pd.DataFrame(np.zeros((total_control_step, len(meter_list))), columns = meter_list)
+    # occu_table = pd.DataFrame(np.zeros((total_control_step, len(meter_list))), columns = meter_list)
+
+    loop_detector_list = traci.inductionloop.getIDList()
+
+    step = 0
+    while step < total_sim_step:
+
+        # set initial rate of all meters to 1800
+        if step == 0:
+            for meter in meter_list:
+
+                r_k_meter = ALIANA_Controller_Initial(meter, r_k=1800)
+                meter_rate_table.at[step / control_interval, meter] = r_k_meter
+
+            # at the initial step, scribe loop detectors for occupancy values
+            for loop in loop_detector_list:
+                traci.inductionloop.subscribe(loop, (tc.VAR_LAST_INTERVAL_OCCUPANCY, tc.VAR_LAST_INTERVAL_NUMBER,))
+
+        # change ramp metering rate
+        if step > 0 and step % control_interval == 0:
+            print("resetting ramp metering rate")
+
+            # loop through each meter
+            for meter in meter_list:
+                print(meter)
+                meter_parts = meter.split('_')
+                station = f"{meter_parts[0]}_{meter_parts[2]}"
+                downstream_loops = tuple(s for s in loop_detector_list if s.startswith(station))
+
+                # retrieve downstream occupancy
+                occus_down_station = {loop: None for loop in downstream_loops}
+                for loop in downstream_loops:
+                    occu_down_single = traci.inductionloop.getSubscriptionResults(loop)[tc.VAR_LAST_INTERVAL_OCCUPANCY]
+                    occus_down_station[loop] = occu_down_single
+                occu_down = sum(occus_down_station.values()) / len(occus_down_station)
+
+                # retrieve downstream flow
+                flow_down_station = {loop: None for loop in downstream_loops}
+                for loop in downstream_loops:
+                    flow_down_single = traci. inductionloop.getSubscriptionResults(loop)[tc.VAR_LAST_INTERVAL_NUMBER]
+                    flow_down_station[loop] = flow_down_single
+                flow_down = sum(flow_down_station.values()) * (3600/control_interval) # flow needs to be converted into vph
+
+                #Apply ALIANA control
+                r_pre = meter_rate_table.at[(step/control_interval-1), meter]
+                # occu_down_pre = occu_table.at[(step/control_interval-1), meter]
+
+                if meter in ['H10E_onMeter_1', 'H10E_onMeter_2', 'H10E_onMeter_3', 'H25S_onMeter_1', 'H15N_onMeter_2']:
+                    flow_desire = ALINEA_params['desire_flow_lane'] * 6
+                else:
+                    flow_desire = ALINEA_params['desire_flow_lane'] * 5
+
+                r_k_meter = FLALINEA_Controller(meter, r_pre=r_pre, occu_down=occu_down, flow_down=flow_down,
+                                                occu_desire=ALINEA_params['desire_occu'], flow_desire=flow_desire,
+                                              K_F=ALINEA_params['K_F'], r_min = ALINEA_params['r_min'], r_max = ALINEA_params['r_max'])
+
+                meter_rate_table.at[step / control_interval, meter] = r_k_meter
+                # occu_table.at[step / control_interval, meter] = occu_down
+
+            # reset loop detectors subscription list
+            for loop in loop_detector_list:
+                traci.inductionloop.subscribe(loop, (tc.VAR_LAST_INTERVAL_OCCUPANCY, tc.VAR_LAST_INTERVAL_NUMBER,))
 
         traci.simulationStep()
         step += 1

@@ -4,12 +4,16 @@ params = {}
 params['total_sim_step'] = 7200
 params['control_interval'] = 120
 params['burnin_step'] = 1800
+params['cool_down_step'] = 900
 
 ALINEA_params = {
     'desire_occu' : 15,
+    'K_P' : 70, # for PI-ALINEA
     'K_R' : 70,
+    'K_F' : 1, # for FL-ALINEA
     'r_min': 200,
-    'r_max': 1800
+    'r_max': 1800,
+    'desire_flow_lane': 1800 * 0.8 # for FL_ALINEA
 }
 
 MPC_params = {
